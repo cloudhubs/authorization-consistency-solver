@@ -25,8 +25,7 @@ so that the root of the source code is in `/data/train-ticket/train-ticket-a4ed2
 3. Run `python -m validation.auth.tests` to run a series of tests to ensure the setup is properly completed.
 
 ## Replicating Section 5.1
-Run `python -m validation.system_model.case_study <ARG>`. This will generate the statistics presented in Section 5.1 for the system model we generated 
-(not ground truth).
+Run `python -m validation.system_model.case_study <ARG>`. This will generate the statistics presented in Section 5.1.
 
 `<ARG>` can be replaced with one of the following:
 - GROUND_TRUTH_SYSTEM_MODEL - Run validation using the manually corrected ground truth intermediate model.
@@ -41,8 +40,7 @@ Run `python -m validation.auth.case_study <ARG> <DEBUG>`. This will generate the
 `<ARG>` can be replaced with one of the following:
 - GROUND_TRUTH_SYSTEM_MODEL - Run validation using the manually corrected ground truth intermediate model.
 - GENERATED_SYSTEM_MODEL - Run validation using the automatically previously generated ground truth intermediate model.
-- GENEREATE_NEW_SYSTEM_MODEL - Run validation by generating a new intermediate model from scratch. The generated intermediate model will be stored in `data/system-models/train-ticket.json`
-
+- GENERATE_NEW_SYSTEM_MODEL - Run validation by generating a new intermediate model from scratch. The generated intermediate model will be stored in `data/system-models/train-ticket.json`
 
 ## Replicating Section 5.3
 Run `python -m validation.auth.fault_injection`. This will randomly generate test cases (logs, models, and solver suggestions) similar to the ones

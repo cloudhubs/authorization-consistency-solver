@@ -1,4 +1,5 @@
 # Towards Automated Formal Verification of Authorization Policy in Microservice Systems
+##### Connor Wojtak, Shakthi Weerasinghe, Nilesh Rao, Tomas Cerny, Amr Abdelfattah
 
 ## Project Requirements
 * Python and pip are required (confirmed working with Python 3.12.6)
@@ -35,7 +36,7 @@ Run `python -m validation.system_model.case_study <ARG>`. This will generate the
 ## Replicating Section 5.2
 Run `python -m validation.auth.case_study <ARG> <DEBUG>`. This will generate the solver results presented in Section 5.2 based on the ground truth system model.
 
-`<DEBUG>` can be replaced with DEBUG for additional information or be left blank. 
+`<DEBUG>` can be replaced with DEBUG to log the entire constraint system to `data/constraints.txt`. This may take a bit.
 
 `<ARG>` can be replaced with one of the following:
 - GROUND_TRUTH_SYSTEM_MODEL - Run validation using the manually corrected ground truth intermediate model.

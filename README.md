@@ -16,6 +16,8 @@ and solver results (`/suggestions`). See `/auth_fault_injection/README.txt` for 
 - `/validation/auth` contains the code used to conduct the case study. `/validation/auth/case_study.py` was used in Section 5.2 + 5.4. 
 `/validation/auth/fault_injection.py` was used in Section 5.3.
 - `/validation/system_model` contains the code used to validate the model. `/validation/system_model/case_study.py` was used in Section 5.1 + 5.4.
+- `/cimet-extract-lib` contains a modified version of CIMET 2 that was used to generate the IR used by our project. The original version of the code
+is available at [CIMET 2's GitHub repository](https://github.com/cloudhubs/cimet).
 
 ## Running the Project
 1. Extract the source code of 
@@ -49,3 +51,15 @@ in Section 5.3. The actual test cases we used are stored in `data/auth_fault_inj
 # Replicating Section 5.4
 When running the commands for Sections 5.1 and 5.2, times will be outputted.
 These times were what was recorded in `/data/validation/execution_times.xlsx`.
+
+# On Generating the IR
+These commands use a pre-generated version of the IR at `data/train-ticket/train-ticket-ir-a4ed2433b0b6ab6e0d60115fc19efecb2548c6cd.json`.
+If you would like to generate your own version of the IR, you can replace this IR with one generated in the `cimet-extract-lib` folder.
+You will need:
+* Maven 3.6+
+* Java 16+ (16 Recommended)
+
+You can then `cd cimet-extract-lib` and run `mvn clean install`. This will build the library and run a test that generates the IR.
+
+You can change `cimet-extract-lib/src/test/resources/configs/test_config2.json` to a different repository and/or change the commit ID in
+`cimet-extract-lib/src/test/java/IRExtractionTest.java` if you wish.

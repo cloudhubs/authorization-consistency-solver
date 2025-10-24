@@ -104,7 +104,7 @@ def verifySystem(msSystem: MicroserviceSystem) -> str:
 
 if __name__ == "__main__":
     msSystemFixed = modelFromJSON("data/system-models/train-ticket-auth-fixed.json")
-    baseStoragePath = "data/auth_fault_injection/"
+    baseStoragePath = "data/auth_fault_injection"
 
     # Test regimen
     # permittedRole, 1 fault => 3 instances
@@ -130,7 +130,7 @@ if __name__ == "__main__":
                     with open(f"{baseStoragePath}/logs/{i}_fault_{faultTypes[j]}_{k}.txt", "w") as f:
                         f.write(log)
                     log2 = verifySystem(faultSystem)
-                    with open(f"{baseStoragePath}/changes/{i}_fault_{faultTypes[j]}_{k}.txt", "w") as f:
+                    with open(f"{baseStoragePath}/suggestions/{i}_fault_{faultTypes[j]}_{k}.txt", "w") as f:
                         f.write(log2)
                     print(f"{i}_fault_{faultTypes[j]}_{k} has been generated.")
                     
@@ -145,7 +145,7 @@ if __name__ == "__main__":
             with open(f"{baseStoragePath}/logs/3_fault_multi_{i}.txt", "w") as f:
                 f.write(log)
             log2 = verifySystem(system)
-            with open(f"{baseStoragePath}/changes/3_fault_multi_{i}.txt", "w") as f:
+            with open(f"{baseStoragePath}/suggestions/3_fault_multi_{i}.txt", "w") as f:
                 f.write(log2)
             print(f"3_fault_multi_{i} has been generated.")
 

@@ -1,0 +1,880 @@
+{
+  "adminbasic.controller.AdminBasicInfoController#addConfig": {},
+  "adminbasic.controller.AdminBasicInfoController#addContacts": {},
+  "adminbasic.controller.AdminBasicInfoController#addPrice": {},
+  "adminbasic.controller.AdminBasicInfoController#addStation": {},
+  "adminbasic.controller.AdminBasicInfoController#addTrain": {},
+  "adminbasic.controller.AdminBasicInfoController#deleteConfig": {},
+  "adminbasic.controller.AdminBasicInfoController#deleteContacts": {},
+  "adminbasic.controller.AdminBasicInfoController#deletePrice": {},
+  "adminbasic.controller.AdminBasicInfoController#deleteStation": {},
+  "adminbasic.controller.AdminBasicInfoController#deleteTrain": {},
+  "adminbasic.controller.AdminBasicInfoController#getAllConfigs": {},
+  "adminbasic.controller.AdminBasicInfoController#getAllContacts": {},
+  "adminbasic.controller.AdminBasicInfoController#getAllPrices": {},
+  "adminbasic.controller.AdminBasicInfoController#getAllStations": {},
+  "adminbasic.controller.AdminBasicInfoController#getAllTrains": {},
+  "adminbasic.controller.AdminBasicInfoController#home": {},
+  "adminbasic.controller.AdminBasicInfoController#modifyConfig": {},
+  "adminbasic.controller.AdminBasicInfoController#modifyContacts": {},
+  "adminbasic.controller.AdminBasicInfoController#modifyPrice": {},
+  "adminbasic.controller.AdminBasicInfoController#modifyStation": {},
+  "adminbasic.controller.AdminBasicInfoController#modifyTrain": {},
+  "adminorder.controller.AdminOrderController#addOrder": {},
+  "adminorder.controller.AdminOrderController#deleteOrder": {},
+  "adminorder.controller.AdminOrderController#getAllOrders": {},
+  "adminorder.controller.AdminOrderController#home": {},
+  "adminorder.controller.AdminOrderController#updateOrder": {},
+  "adminroute.controller.AdminRouteController#addRoute": {},
+  "adminroute.controller.AdminRouteController#deleteRoute": {},
+  "adminroute.controller.AdminRouteController#getAllRoutes": {},
+  "adminroute.controller.AdminRouteController#home": {},
+  "admintravel.controller.AdminTravelController#addTravel": {},
+  "admintravel.controller.AdminTravelController#deleteTravel": {},
+  "admintravel.controller.AdminTravelController#getAllTravels": {},
+  "admintravel.controller.AdminTravelController#home": {},
+  "admintravel.controller.AdminTravelController#updateTravel": {},
+  "adminuser.controller.AdminUserController#addUser": {},
+  "adminuser.controller.AdminUserController#deleteUser": {},
+  "adminuser.controller.AdminUserController#getAllUsers": {},
+  "adminuser.controller.AdminUserController#home": {},
+  "adminuser.controller.AdminUserController#updateUser": {},
+  "assurance.controller.AssuranceController#home": {},
+  "cancel.controller.CancelController#home": {},
+  "com.trainticket.controller.PaymentController#home": {},
+  "config.controller.ConfigController#home": {},
+  "consign.controller.ConsignController#home": {},
+  "consignprice.controller.ConsignPriceController#home": {},
+  "contacts.controller.ContactsController#home": {},
+  "execute.controller.ExecuteControlller#home": {},
+  "fdse.microservice.controller.BasicController#home": {},
+  "fdse.microservice.controller.StationController#home": {},
+  "food.controller.FoodStoreController#home": {},
+  "food.controller.TrainFoodController#home": {},
+  "foodsearch.controller.FoodController#home": {},
+  "inside_payment.controller.InsidePaymentController#home": {},
+  "notification.controller.NotificationController#home": {},
+  "order.controller.OrderController#home": {},
+  "other.controller.OrderOtherController#home": {},
+  "plan.controller.RoutePlanController#home": {},
+  "preserve.controller.PreserveController#home": {},
+  "preserveOther.controller.PreserveOtherController#home": {},
+  "price.controller.PriceController#home": {},
+  "rebook.controller.RebookController#home": {},
+  "route.controller.RouteController#home": {},
+  "seat.controller.SeatController#home": {},
+  "security.controller.SecurityController#home": {},
+  "ticketinfo.controller.TicketInfoController#home": {},
+  "train.controller.TrainController#home": {},
+  "travel.controller.TravelController#home": {},
+  "travel2.controller.Travel2Controller#home": {},
+  "travelplan.controller.TravelPlanController#home": {},
+  "auth.controller.AuthController#getHello": {},
+  "auth.controller.UserController#getHello": {},
+  "user.controller.UserController#testHello": {},
+  "assurance.controller.AssuranceController#getAllAssurances": {
+    "Assurance": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "assurance.controller.AssuranceController#deleteAssurance": {
+    "Assurance": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": true
+    }
+  },
+  "assurance.controller.AssuranceController#deleteAssuranceByOrderId": {
+    "Assurance": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": true
+    }
+  },
+  "assurance.controller.AssuranceController#modifyAssurance": {
+    "Assurance": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": true,
+      "DELETE": false
+    }
+  },
+  "assurance.controller.AssuranceController#createNewAssurance": {
+    "Assurance": {
+      "CREATE": true,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "assurance.controller.AssuranceController#getAssuranceById": {
+    "Assurance": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "assurance.controller.AssuranceController#findAssuranceByOrderId": {
+    "Assurance": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "assurance.controller.AssuranceController#getAllAssuranceType": {},
+  "auth.controller.AuthController#createDefaultUser": {
+    "User": { "CREATE": true, "READ": false, "UPDATE": false, "DELETE": false }
+  },
+  "auth.controller.UserController#getToken": {
+    "User": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "auth.controller.UserController#getAllUser": {
+    "User": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "auth.controller.UserController#deleteUserById": {
+    "User": { "CREATE": false, "READ": false, "UPDATE": false, "DELETE": true }
+  },
+
+  "config.controller.ConfigController#queryAll": {
+    "ConfigRepository": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "config.controller.ConfigController#createConfig": {
+    "ConfigRepository": { "CREATE": true, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "config.controller.ConfigController#updateConfig": {
+    "ConfigRepository": { "CREATE": false, "READ": true, "UPDATE": true, "DELETE": false }
+  },
+  "config.controller.ConfigController#deleteConfig": {
+    "ConfigRepository": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": true }
+  },
+  "config.controller.ConfigController#retrieve": {
+    "ConfigRepository": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+
+  "consignprice.controller.ConsignPriceController#getPriceByWeightAndRegion": {
+    "ConsignPrice": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "consignprice.controller.ConsignPriceController#getPriceInfo": {
+    "ConsignPrice": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "consignprice.controller.ConsignPriceController#getPriceConfig": {
+    "ConsignPrice": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "consignprice.controller.ConsignPriceController#modifyPriceConfig": {
+    "ConsignPrice": {
+      "CREATE": true,
+      "READ": true,
+      "UPDATE": true,
+      "DELETE": false
+    }
+  },
+
+  "consign.controller.ConsignController#insertConsign": {
+    "ConsignRepository": {
+      "CREATE": true,
+      "READ": false,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "consign.controller.ConsignController#updateConsign": {
+    "ConsignRepository": {
+      "CREATE": true,
+      "READ": true,
+      "UPDATE": true,
+      "DELETE": false
+    }
+  },
+  "consign.controller.ConsignController#findByAccountId": {
+    "ConsignRepository": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "consign.controller.ConsignController#findByOrderId": {
+    "ConsignRepository": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "consign.controller.ConsignController#findByConsignee": {
+    "ConsignRepository": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+
+  "contacts.controller.ContactsController#getAllContacts": {
+    "Contacts": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "contacts.controller.ContactsController#createNewContacts": {
+    "Contacts": {
+      "CREATE": true,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "contacts.controller.ContactsController#createNewContactsAdmin": {
+    "Contacts": {
+      "CREATE": true,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "contacts.controller.ContactsController#deleteContacts": {
+    "Contacts": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": true
+    }
+  },
+  "contacts.controller.ContactsController#modifyContacts": {
+    "Contacts": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": true,
+      "DELETE": false
+    }
+  },
+  "contacts.controller.ContactsController#findContactsByAccountId": {
+    "Contacts": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "contacts.controller.ContactsController#getContactsByContactsId": {
+    "Contacts": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+
+  "food.controller.FoodStoreController#getAllFoodStores": {
+    "FoodStore": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "food.controller.FoodStoreController#getFoodStoresOfStation": {
+    "FoodStore": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "food.controller.FoodStoreController#getFoodStoresByStationIds": {
+    "FoodStore": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "food.controller.TrainFoodController#getAllTrainFood": {
+    "TrainFood": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "food.controller.TrainFoodController#getTrainFoodOfTrip": {
+    "TrainFood": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "foodsearch.controller.FoodController#findAllFoodOrder": {
+    "FoodOrder": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "foodsearch.controller.FoodController#createFoodOrder": {
+    "FoodOrder": {
+      "CREATE": true,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "foodsearch.controller.FoodController#updateFoodOrder": {
+    "FoodOrder": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": true,
+      "DELETE": false
+    }
+  },
+  "foodsearch.controller.FoodController#deleteFoodOrder": {
+    "FoodOrder": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": true
+    }
+  },
+  "foodsearch.controller.FoodController#findFoodOrderByOrderId": {
+    "FoodOrder": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "foodsearch.controller.FoodController#getAllFood": {},
+  "inside_payment.controller.InsidePaymentController#pay": {
+    "Money": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    },
+    "Payment": {
+      "CREATE": true,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "inside_payment.controller.InsidePaymentController#createAccount": {
+    "Money": {
+      "CREATE": true,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "inside_payment.controller.InsidePaymentController#addMoney": {
+    "Money": {
+      "CREATE": true,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "inside_payment.controller.InsidePaymentController#queryPayment": {
+    "Payment": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "inside_payment.controller.InsidePaymentController#queryAccount": {
+    "Money": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    },
+    "Payment": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "inside_payment.controller.InsidePaymentController#drawBack": {
+    "Money": {
+      "CREATE": true,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "inside_payment.controller.InsidePaymentController#payDifference": {
+    "Money": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    },
+    "Payment": {
+      "CREATE": true,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "inside_payment.controller.InsidePaymentController#queryAddMoney": {
+    "Money": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "other.controller.OrderOtherController#getTicketListByDateAndTripId": {
+    "Order": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "other.controller.OrderOtherController#createNewOrder": {
+    "Order": { "CREATE": true, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "other.controller.OrderOtherController#addcreateNewOrder": {
+    "Order": { "CREATE": true, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "other.controller.OrderOtherController#queryOrders": {
+    "Order": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "other.controller.OrderOtherController#queryOrdersForRefresh": {
+    "Order": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "other.controller.OrderOtherController#calculateSoldTicket": {
+    "Order": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "other.controller.OrderOtherController#getOrderPrice": {
+    "Order": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "other.controller.OrderOtherController#payOrder": {
+    "Order": { "CREATE": false, "READ": true, "UPDATE": true, "DELETE": false }
+  },
+  "other.controller.OrderOtherController#getOrderById": {
+    "Order": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "other.controller.OrderOtherController#modifyOrder": {
+    "Order": { "CREATE": false, "READ": true, "UPDATE": true, "DELETE": false }
+  },
+  "other.controller.OrderOtherController#securityInfoCheck": {
+    "Order": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "other.controller.OrderOtherController#saveOrderInfo": {
+    "Order": { "CREATE": false, "READ": true, "UPDATE": true, "DELETE": false }
+  },
+  "other.controller.OrderOtherController#updateOrder": {
+    "Order": { "CREATE": false, "READ": true, "UPDATE": true, "DELETE": false }
+  },
+  "other.controller.OrderOtherController#deleteOrder": {
+    "Order": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": true }
+  },
+  "other.controller.OrderOtherController#findAllOrder": {
+    "Order": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "order.controller.OrderController#getTicketListByDateAndTripId": {
+    "Order": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "order.controller.OrderController#createNewOrder": {
+    "Order": { "CREATE": true, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "order.controller.OrderController#addcreateNewOrder": {
+    "Order": { "CREATE": true, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "order.controller.OrderController#queryOrders": {
+    "Order": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "order.controller.OrderController#queryOrdersForRefresh": {
+    "Order": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "order.controller.OrderController#calculateSoldTicket": {
+    "Order": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "order.controller.OrderController#getOrderPrice": {
+    "Order": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "order.controller.OrderController#payOrder": {
+    "Order": { "CREATE": false, "READ": true, "UPDATE": true, "DELETE": false }
+  },
+  "order.controller.OrderController#getOrderById": {
+    "Order": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "order.controller.OrderController#modifyOrder": {
+    "Order": { "CREATE": false, "READ": true, "UPDATE": true, "DELETE": false }
+  },
+  "order.controller.OrderController#securityInfoCheck": {
+    "Order": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "order.controller.OrderController#saveOrderInfo": {
+    "Order": { "CREATE": true, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "order.controller.OrderController#updateOrder": {
+    "Order": { "CREATE": false, "READ": true, "UPDATE": true, "DELETE": false }
+  },
+  "order.controller.OrderController#deleteOrder": {
+    "Order": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": true }
+  },
+  "order.controller.OrderController#findAllOrder": {
+    "Order": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "com.trainticket.controller.PaymentController#pay": {
+    "Payment": { "CREATE": true, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "com.trainticket.controller.PaymentController#addMoney": {
+    "Money": { "CREATE": true, "READ": false, "UPDATE": false, "DELETE": false }
+  },
+  "com.trainticket.controller.PaymentController#query": {
+    "Payment": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "price.controller.PriceController#query": {
+    "PriceConfig": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "price.controller.PriceController#queryAll": {
+    "PriceConfig": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "price.controller.PriceController#create": {
+    "PriceConfig": {
+      "CREATE": true,
+      "READ": true,
+      "UPDATE": true,
+      "DELETE": false
+    }
+  },
+  "price.controller.PriceController#delete": {
+    "PriceConfig": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": true
+    }
+  },
+  "price.controller.PriceController#update": {
+    "PriceConfig": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": true,
+      "DELETE": false
+    }
+  },
+  "route.controller.RouteController#createAndModifyRoute": {
+    "Route": { "CREATE": true, "READ": true, "UPDATE": true, "DELETE": false }
+  },
+  "route.controller.RouteController#deleteRoute": {
+    "Route": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": true }
+  },
+  "route.controller.RouteController#queryById": {
+    "Route": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "route.controller.RouteController#queryAll": {
+    "Route": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "route.controller.RouteController#queryByStartAndTerminal": {
+    "Route": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "security.controller.SecurityController#findAllSecurityConfig": {
+    "SecurityRepository": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "security.controller.SecurityController#create": {
+    "SecurityRepository": {
+      "CREATE": true,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "security.controller.SecurityController#update": {
+    "SecurityRepository": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": true,
+      "DELETE": false
+    }
+  },
+  "security.controller.SecurityController#delete": {
+    "SecurityRepository": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": true
+    }
+  },
+  "security.controller.SecurityController#check": {
+    "SecurityRepository": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+
+  "fdse.microservice.controller.StationController#query": {
+    "Station": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "fdse.microservice.controller.StationController#create": {
+    "Station": {
+      "CREATE": true,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "fdse.microservice.controller.StationController#update": {
+    "Station": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": true,
+      "DELETE": false
+    }
+  },
+  "fdse.microservice.controller.StationController#delete": {
+    "Station": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": true
+    }
+  },
+  "fdse.microservice.controller.StationController#queryForStationId": {
+    "Station": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "fdse.microservice.controller.StationController#queryForIdBatch": {
+    "Station": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "fdse.microservice.controller.StationController#queryById": {
+    "Station": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "fdse.microservice.controller.StationController#queryForNameBatch": {
+    "Station": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "train.controller.TrainController#create": {
+    "TrainType": {
+      "CREATE": true,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "train.controller.TrainController#retrieve": {
+    "TrainType": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "train.controller.TrainController#update": {
+    "TrainType": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": true,
+      "DELETE": false
+    }
+  },
+  "train.controller.TrainController#delete": {
+    "TrainType": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": true
+    }
+  },
+  "train.controller.TrainController#query": {
+    "TrainType": {
+      "CREATE": false,
+      "READ": true,
+      "UPDATE": false,
+      "DELETE": false
+    }
+  },
+  "travel.controller.TravelController#getTrainTypeByTripId": {
+    "Trip": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "travel.controller.TravelController#getRouteByTripId": {
+    "Trip": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "travel.controller.TravelController#getTripsByRouteId": {
+    "Trip": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "travel.controller.TravelController#createTrip": {
+    "Trip": { "CREATE": true, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "travel.controller.TravelController#retrieve": {
+    "Trip": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "travel.controller.TravelController#updateTrip": {
+    "Trip": { "CREATE": false, "READ": true, "UPDATE": true, "DELETE": false }
+  },
+  "travel.controller.TravelController#deleteTrip": {
+    "Trip": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": true }
+  },
+  "travel.controller.TravelController#queryInfo": {
+    "Trip": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "travel.controller.TravelController#getTripAllDetailInfo": {
+    "Trip": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "travel.controller.TravelController#queryAll": {
+    "Trip": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "travel.controller.TravelController#adminQueryAll": {
+    "Trip": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "travel2.controller.Travel2Controller#getTrainTypeByTripId": {
+    "Trip": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "travel2.controller.Travel2Controller#getRouteByTripId": {
+    "Trip": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "travel2.controller.Travel2Controller#getTripsByRouteId": {
+    "Trip": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "travel2.controller.Travel2Controller#createTrip": {
+    "Trip": { "CREATE": true, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "travel2.controller.Travel2Controller#retrieve": {
+    "Trip": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "travel2.controller.Travel2Controller#updateTrip": {
+    "Trip": { "CREATE": false, "READ": true, "UPDATE": true, "DELETE": false }
+  },
+  "travel2.controller.Travel2Controller#deleteTrip": {
+    "Trip": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": true }
+  },
+  "travel2.controller.Travel2Controller#queryInfo": {
+    "Trip": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "travel2.controller.Travel2Controller#getTripAllDetailInfo": {
+    "Trip": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "travel2.controller.Travel2Controller#queryAll": {
+    "Trip": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "travel2.controller.Travel2Controller#adminQueryAll": {
+    "Trip": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "user.controller.UserController#getAllUser": {
+    "User": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "user.controller.UserController#getUserByUserName": {
+    "User": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "user.controller.UserController#getUserByUserId": {
+    "User": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "user.controller.UserController#registerUser": {
+    "User": { "CREATE": true, "READ": true, "UPDATE": false, "DELETE": false }
+  },
+  "user.controller.UserController#deleteUserById": {
+    "User": { "CREATE": false, "READ": true, "UPDATE": false, "DELETE": true }
+  },
+  "user.controller.UserController#updateUser": {
+    "User": { "CREATE": false, "READ": true, "UPDATE": true, "DELETE": true }
+  },
+  "fdse.microservice.controller.BasicController#queryForTravel": {},
+  "fdse.microservice.controller.BasicController#queryForStationId": {},
+  "cancel.controller.CancelController#calculate": {},
+  "cancel.controller.CancelController#cancelTicket": {},
+  "execute.controller.ExecuteControlller#executeTicket": {},
+  "execute.controller.ExecuteControlller#collectTicket": {},
+  "notification.controller.NotificationController#preserve_success": {},
+  "notification.controller.NotificationController#order_create_success": {},
+  "notification.controller.NotificationController#order_changed_success": {},
+  "notification.controller.NotificationController#order_cancel_success": {},
+  "preserveOther.controller.PreserveOtherController#preserve": {},
+  "preserve.controller.PreserveController#preserve": {},
+  "rebook.controller.RebookController#payDifference": {},
+  "rebook.controller.RebookController#rebook": {},
+  "plan.controller.RoutePlanController#getCheapestRoutes": {},
+  "plan.controller.RoutePlanController#getQuickestRoutes": {},
+  "plan.controller.RoutePlanController#getMinStopStations": {},
+  "seat.controller.SeatController#create": {},
+  "seat.controller.SeatController#getLeftTicketOfInterval": {},
+  "ticketinfo.controller.TicketInfoController#queryForTravel": {},
+  "ticketinfo.controller.TicketInfoController#queryForStationId": {},
+  "travelplan.controller.TravelPlanController#getTransferResult": {},
+  "travelplan.controller.TravelPlanController#getByCheapest": {},
+  "travelplan.controller.TravelPlanController#getByQuickest": {},
+  "travelplan.controller.TravelPlanController#getByMinStation": {},
+  "verifycode.controller.VerifyCodeController#imageCode": {},
+  "verifycode.controller.VerifyCodeController#verifyCode": {}
+}

@@ -1,0 +1,1 @@
+System connection from POST /api/v1/notifyservice/notification/order_changed_success => PUT /api/v1/adminbasicservice/adminbasic/trains was added.

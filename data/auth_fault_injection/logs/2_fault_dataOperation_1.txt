@@ -1,0 +1,4 @@
+Data operation on OrderRepository in POST /api/v1/orderservice/order/tickets was changed from 4 => 9.
+Endpoint authorized roles for POST /api/v1/orderservice/order/tickets changed from 7 => 4.
+Data operation on FoodOrderRepository in GET /api/v1/foodservice/orders/{?} was changed from 4 => 12.
+Endpoint authorized roles for GET /api/v1/foodservice/orders/{?} changed from 7 => 3.

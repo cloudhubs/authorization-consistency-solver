@@ -1,0 +1,2 @@
+Data operation on RouteRepository in GET /api/v1/routeservice/routes was changed from 4 => 12.
+Endpoint authorized roles for GET /api/v1/routeservice/routes changed from 7 => 3.

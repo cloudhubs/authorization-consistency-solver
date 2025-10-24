@@ -1,0 +1,6 @@
+Data operation on ConfigRepository in DELETE /api/v1/configservice/configs/{?} was changed from 5 => 2.
+Endpoint authorized roles for DELETE /api/v1/configservice/configs/{?} changed from 7 => 5.
+Data operation on PriceConfigRepository in PUT /api/v1/priceservice/prices was changed from 6 => 15.
+Endpoint authorized roles for PUT /api/v1/priceservice/prices changed from 7 => 0.
+Data operation on AssuranceRepository in DELETE /api/v1/assuranceservice/assurances/assuranceid/{?} was changed from 5 => 1.
+Endpoint authorized roles for DELETE /api/v1/assuranceservice/assurances/assuranceid/{?} changed from 2 => 6.

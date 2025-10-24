@@ -1,0 +1,2 @@
+Data operation on OrderRepository in POST /api/v1/orderOtherService/orderOther/query was changed from 4 => 7.
+Endpoint authorized roles for POST /api/v1/orderOtherService/orderOther/query changed from 7 => 0.

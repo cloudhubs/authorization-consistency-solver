@@ -1,0 +1,4 @@
+Data operation on AssuranceRepository in PATCH /api/v1/assuranceservice/assurances/{?}/{?}/{?} was changed from 6 => 10.
+Endpoint authorized roles for PATCH /api/v1/assuranceservice/assurances/{?}/{?}/{?} changed from 2 => 1.
+Data operation on TripRepository in POST /api/v1/travel2service/trips/routes was changed from 4 => 3.
+Endpoint authorized roles for POST /api/v1/travel2service/trips/routes changed from 7 => 3.

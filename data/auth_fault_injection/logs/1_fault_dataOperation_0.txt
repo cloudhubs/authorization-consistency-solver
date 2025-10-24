@@ -1,0 +1,2 @@
+Data operation on TripRepository in GET /api/v1/travelservice/trips was changed from 4 => 9.
+Endpoint authorized roles for GET /api/v1/travelservice/trips changed from 7 => 6.

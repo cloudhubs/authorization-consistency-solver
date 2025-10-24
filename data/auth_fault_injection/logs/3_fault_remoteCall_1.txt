@@ -1,0 +1,3 @@
+System connection from GET /api/v1/assuranceservice/assurances => POST /api/v1/stationservice/stations was added.
+System connection from POST /api/v1/paymentservice/payment/money => GET /api/v1/adminorderservice/welcome was added.
+System connection from GET /api/v1/inside_pay_service/inside_payment/money => DELETE /api/v1/adminbasicservice/adminbasic/configs/{?} was added.

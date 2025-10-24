@@ -1,0 +1,2 @@
+System connection from GET /api/v1/adminrouteservice/welcome => PATCH /api/v1/assuranceservice/assurances/{?}/{?}/{?} was added.
+System connection from PUT /api/v1/trainservice/trains => PUT /api/v1/contactservice/contacts was added.

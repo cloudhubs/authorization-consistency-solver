@@ -1,0 +1,3 @@
+System connection from DELETE /api/v1/priceservice/prices => POST /api/v1/paymentservice/payment/money was added.
+System connection from PUT /api/v1/adminorderservice/adminorder => DELETE /api/v1/assuranceservice/assurances/orderid/{?} was added.
+System connection from DELETE /api/v1/trainservice/trains/{?} => GET /api/v1/adminrouteservice/adminroute was added.

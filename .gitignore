@@ -1,0 +1,4 @@
+.venv/
+__pycache__/
+.vscode/
+data/train-ticket/train-ticket-a4ed2433b0b6ab6e0d60115fc19efecb2548c6cd/

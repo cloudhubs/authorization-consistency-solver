@@ -1,0 +1,889 @@
+{
+  "GET /api/v1/priceservice/prices/welcome": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/priceservice/prices/{routeId}/{trainType}": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/priceservice/prices": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/priceservice/prices": [
+    "admin"
+  ],
+  "DELETE /api/v1/priceservice/prices": [
+    "admin"
+  ],
+  "PUT /api/v1/priceservice/prices": [
+    "admin"
+  ],
+  "GET /api/v1/routeplanservice/welcome": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/routeplanservice/routePlan/cheapestRoute": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/routeplanservice/routePlan/quickestRoute": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/routeplanservice/routePlan/minStopStations": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/consignservice/welcome": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/consignservice/consigns": [
+    "admin",
+    "user"
+  ],
+  "PUT /api/v1/consignservice/consigns": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/consignservice/consigns/account/{id}": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/consignservice/consigns/order/{id}": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/consignservice/consigns/{consignee}": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/configservice/welcome": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/configservice/configs": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/configservice/configs": [
+    "admin"
+  ],
+  "PUT /api/v1/configservice/configs": [
+    "admin"
+  ],
+  "DELETE /api/v1/configservice/configs/{configName}": [
+    "admin"
+  ],
+  "GET /api/v1/configservice/configs/{configName}": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/travelplanservice/welcome": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/travelplanservice/travelPlan/transferResult": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/travelplanservice/travelPlan/cheapest": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/travelplanservice/travelPlan/quickest": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/travelplanservice/travelPlan/minStation": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/contactservice/contacts/welcome": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/contactservice/contacts": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/contactservice/contacts": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/contactservice/contacts/admin": [
+    "admin",
+    "user"
+  ],
+  "DELETE /api/v1/contactservice/contacts/{contactsId}": [
+    "admin",
+    "user"
+  ],
+  "PUT /api/v1/contactservice/contacts": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/contactservice/contacts/account/{accountId}": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/contactservice/contacts/{id}": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/trainservice/trains/welcome": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/trainservice/trains": [
+    "admin"
+  ],
+  "GET /api/v1/trainservice/trains/{id}": [
+    "admin",
+    "user"
+  ],
+  "PUT /api/v1/trainservice/trains": [
+    "admin"
+  ],
+  "DELETE /api/v1/trainservice/trains/{id}": [
+    "admin"
+  ],
+  "GET /api/v1/trainservice/trains": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/assuranceservice/welcome": [
+    "user"
+  ],
+  "GET /api/v1/assuranceservice/assurances": [
+    "user"
+  ],
+  "GET /api/v1/assuranceservice/assurances/types": [
+    "user"
+  ],
+  "DELETE /api/v1/assuranceservice/assurances/assuranceid/{assuranceId}": [
+    "user"
+  ],
+  "DELETE /api/v1/assuranceservice/assurances/orderid/{orderId}": [
+    "user"
+  ],
+  "PATCH /api/v1/assuranceservice/assurances/{assuranceId}/{orderId}/{typeIndex}": [
+    "user"
+  ],
+  "GET /api/v1/assuranceservice/assurances/{typeIndex}/{orderId}": [
+    "user"
+  ],
+  "GET /api/v1/assuranceservice/assurances/assuranceid/{assuranceId}": [
+    "user"
+  ],
+  "GET /api/v1/assuranceservice/assurance/orderid/{orderId}": [
+    "user"
+  ],
+  "GET /api/v1/travel2service/welcome": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/travel2service/train_types/{tripId}": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/travel2service/routes/{tripId}": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/travel2service/trips/routes": [
+    "admin"
+  ],
+  "POST /api/v1/travel2service/trips": [
+    "admin"
+  ],
+  "GET /api/v1/travel2service/trips/{tripId}": [
+    "admin",
+    "user"
+  ],
+  "PUT /api/v1/travel2service/trips": [
+    "admin"
+  ],
+  "DELETE /api/v1/travel2service/trips/{tripId}": [
+    "admin"
+  ],
+  "POST /api/v1/travel2service/trips/left": [
+    "admin"
+  ],
+  "POST /api/v1/travel2service/trip_detail": [
+    "admin"
+  ],
+  "GET /api/v1/travel2service/trips": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/travel2service/admin_trip": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/admintravelservice/welcome": [
+    "admin"
+  ],
+  "GET /api/v1/admintravelservice/admintravel": [
+    "admin"
+  ],
+  "POST /api/v1/admintravelservice/admintravel": [
+    "admin"
+  ],
+  "PUT /api/v1/admintravelservice/admintravel": [
+    "admin"
+  ],
+  "DELETE /api/v1/admintravelservice/admintravel/{tripId}": [
+    "admin"
+  ],
+  "GET /api/v1/rebookservice/welcome": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/rebookservice/rebook/difference": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/rebookservice/rebook": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/preserveservice/welcome": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/preserveservice/preserve": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/foodmapservice/foodstores/welcome": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/foodmapservice/foodstores": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/foodmapservice/foodstores/{stationId}": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/foodmapservice/foodstores": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/foodmapservice/trainfoods/welcome": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/foodmapservice/trainfoods": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/foodmapservice/trainfoods/{tripId}": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/userservice/users/hello": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/userservice/users": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/userservice/users/{userName}": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/userservice/users/id/{userId}": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/userservice/users/register": [
+    "admin",
+    "user"
+  ],
+  "DELETE /api/v1/userservice/users/{userId}": [
+    "admin",
+    "user"
+  ],
+  "PUT /api/v1/userservice/users": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/travelservice/welcome": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/travelservice/train_types/{tripId}": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/travelservice/routes/{tripId}": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/travelservice/trips/routes": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/travelservice/trips": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/travelservice/trips/{tripId}": [
+    "admin",
+    "user"
+  ],
+  "PUT /api/v1/travelservice/trips": [
+    "admin"
+  ],
+  "DELETE /api/v1/travelservice/trips/{tripId}": [
+    "admin"
+  ],
+  "POST /api/v1/travelservice/trips/left": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/travelservice/trip_detail": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/travelservice/trips": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/travelservice/admin_trip": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/seatservice/welcome": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/seatservice/seats": [
+    "admin"
+  ],
+  "POST /api/v1/seatservice/seats/left_tickets": [
+    "admin"
+  ],
+  "GET /api/v1/orderservice/welcome": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/orderservice/order/tickets": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/orderservice/order": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/orderservice/order/admin": [
+    "admin"
+  ],
+  "POST /api/v1/orderservice/order/query": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/orderservice/order/refresh": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/orderservice/order/{travelDate}/{trainNumber}": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/orderservice/order/price/{orderId}": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/orderservice/order/orderPay/{orderId}": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/orderservice/order/{orderId}": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/orderservice/order/status/{orderId}/{status}": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/orderservice/order/security/{checkDate}/{accountId}": [
+    "admin",
+    "user"
+  ],
+  "PUT /api/v1/orderservice/order": [
+    "admin",
+    "user"
+  ],
+  "PUT /api/v1/orderservice/order/admin": [
+    "admin"
+  ],
+  "DELETE /api/v1/orderservice/order/{orderId}": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/orderservice/order": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/executeservice/welcome": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/executeservice/execute/execute/{orderId}": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/executeservice/execute/collected/{orderId}": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/adminbasicservice/welcome": [
+    "admin"
+  ],
+  "GET /api/v1/adminbasicservice/adminbasic/contacts": [
+    "admin"
+  ],
+  "DELETE /api/v1/adminbasicservice/adminbasic/contacts/{contactsId}": [
+    "admin"
+  ],
+  "PUT /api/v1/adminbasicservice/adminbasic/contacts": [
+    "admin"
+  ],
+  "POST /api/v1/adminbasicservice/adminbasic/contacts": [
+    "admin"
+  ],
+  "GET /api/v1/adminbasicservice/adminbasic/stations": [
+    "admin"
+  ],
+  "DELETE /api/v1/adminbasicservice/adminbasic/stations": [
+    "admin"
+  ],
+  "PUT /api/v1/adminbasicservice/adminbasic/stations": [
+    "admin"
+  ],
+  "POST /api/v1/adminbasicservice/adminbasic/stations": [
+    "admin"
+  ],
+  "GET /api/v1/adminbasicservice/adminbasic/trains": [
+    "admin"
+  ],
+  "DELETE /api/v1/adminbasicservice/adminbasic/trains/{id}": [
+    "admin"
+  ],
+  "PUT /api/v1/adminbasicservice/adminbasic/trains": [
+    "admin"
+  ],
+  "POST /api/v1/adminbasicservice/adminbasic/trains": [
+    "admin"
+  ],
+  "GET /api/v1/adminbasicservice/adminbasic/configs": [
+    "admin"
+  ],
+  "DELETE /api/v1/adminbasicservice/adminbasic/configs/{name}": [
+    "admin"
+  ],
+  "PUT /api/v1/adminbasicservice/adminbasic/configs": [
+    "admin"
+  ],
+  "POST /api/v1/adminbasicservice/adminbasic/configs": [
+    "admin"
+  ],
+  "GET /api/v1/adminbasicservice/adminbasic/prices": [
+    "admin"
+  ],
+  "DELETE /api/v1/adminbasicservice/adminbasic/prices": [
+    "admin"
+  ],
+  "PUT /api/v1/adminbasicservice/adminbasic/prices": [
+    "admin"
+  ],
+  "POST /api/v1/adminbasicservice/adminbasic/prices": [
+    "admin"
+  ],
+  "GET /api/v1/adminuserservice/users/welcome": [
+    "admin"
+  ],
+  "GET /api/v1/adminuserservice/users": [
+    "admin"
+  ],
+  "PUT /api/v1/adminuserservice/users": [
+    "admin"
+  ],
+  "POST /api/v1/adminuserservice/users": [
+    "admin"
+  ],
+  "DELETE /api/v1/adminuserservice/users/{userId}": [
+    "admin"
+  ],
+  "GET /api/v1/ticketinfoservice/welcome": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/ticketinfoservice/ticketinfo": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/ticketinfoservice/ticketinfo/{name}": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/verifycode/generate": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/verifycode/verify/{verifyCode}": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/inside_pay_service/welcome": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/inside_pay_service/inside_payment": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/inside_pay_service/inside_payment/account": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/inside_pay_service/inside_payment/{userId}/{money}": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/inside_pay_service/inside_payment/payment": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/inside_pay_service/inside_payment/account": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/inside_pay_service/inside_payment/drawback/{userId}/{money}": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/inside_pay_service/inside_payment/difference": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/inside_pay_service/inside_payment/money": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/notifyservice/welcome": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/notifyservice/notification/preserve_success": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/notifyservice/notification/order_create_success": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/notifyservice/notification/order_changed_success": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/notifyservice/notification/order_cancel_success": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/cancelservice/welcome": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/cancelservice/cancel/refound/{orderId}": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/cancelservice/cancel/{orderId}/{loginId}": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/orderOtherService/welcome": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/orderOtherService/orderOther/tickets": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/orderOtherService/orderOther": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/orderOtherService/orderOther/admin": [
+    "admin"
+  ],
+  "POST /api/v1/orderOtherService/orderOther/query": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/orderOtherService/orderOther/refresh": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/orderOtherService/orderOther/{travelDate}/{trainNumber}": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/orderOtherService/orderOther/price/{orderId}": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/orderOtherService/orderOther/orderPay/{orderId}": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/orderOtherService/orderOther/{orderId}": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/orderOtherService/orderOther/status/{orderId}/{status}": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/orderOtherService/orderOther/security/{checkDate}/{accountId}": [
+    "admin",
+    "user"
+  ],
+  "PUT /api/v1/orderOtherService/orderOther": [
+    "admin",
+    "user"
+  ],
+  "PUT /api/v1/orderOtherService/orderOther/admin": [
+    "admin"
+  ],
+  "DELETE /api/v1/orderOtherService/orderOther/{orderId}": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/orderOtherService/orderOther": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/stationservice/welcome": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/stationservice/stations": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/stationservice/stations": [
+    "admin"
+  ],
+  "PUT /api/v1/stationservice/stations": [
+    "admin"
+  ],
+  "DELETE /api/v1/stationservice/stations": [
+    "admin"
+  ],
+  "GET /api/v1/stationservice/stations/id/{stationNameForId}": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/stationservice/stations/idlist": [
+    "admin"
+  ],
+  "GET /api/v1/stationservice/stations/name/{stationIdForName}": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/stationservice/stations/namelist": [
+    "admin"
+  ],
+  "GET /api/v1/consignpriceservice/welcome": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/consignpriceservice/consignprice/{weight}/{isWithinRegion}": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/consignpriceservice/consignprice/price": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/consignpriceservice/consignprice/config": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/consignpriceservice/consignprice": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/adminorderservice/welcome": [
+    "admin"
+  ],
+  "GET /api/v1/adminorderservice/adminorder": [
+    "admin"
+  ],
+  "POST /api/v1/adminorderservice/adminorder": [
+    "admin"
+  ],
+  "PUT /api/v1/adminorderservice/adminorder": [
+    "admin"
+  ],
+  "DELETE /api/v1/adminorderservice/adminorder/{orderId}/{trainNumber}": [
+    "admin"
+  ],
+  "GET /api/v1/preserveotherservice/welcome": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/preserveotherservice/preserveOther": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/adminrouteservice/welcome": [
+    "admin"
+  ],
+  "GET /api/v1/adminrouteservice/adminroute": [
+    "admin"
+  ],
+  "POST /api/v1/adminrouteservice/adminroute": [
+    "admin"
+  ],
+  "DELETE /api/v1/adminrouteservice/adminroute/{routeId}": [
+    "admin"
+  ],
+  "GET /api/v1/securityservice/welcome": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/securityservice/securityConfigs": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/securityservice/securityConfigs": [
+    "admin",
+    "user"
+  ],
+  "PUT /api/v1/securityservice/securityConfigs": [
+    "admin",
+    "user"
+  ],
+  "DELETE /api/v1/securityservice/securityConfigs/{id}": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/securityservice/securityConfigs/{accountId}": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/auth/hello": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/auth": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/users/hello": [
+    "admin"
+  ],
+  "POST /api/v1/users/login": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/users": [
+    "admin"
+  ],
+  "DELETE /api/v1/users/{userId}": [
+    "admin"
+  ],
+  "GET /api/v1/paymentservice/welcome": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/paymentservice/payment": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/paymentservice/payment/money": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/paymentservice/payment": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/foodservice/welcome": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/foodservice/orders": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/foodservice/orders": [
+    "admin"
+  ],
+  "PUT /api/v1/foodservice/orders": [
+    "admin"
+  ],
+  "DELETE /api/v1/foodservice/orders/{orderId}": [
+    "admin"
+  ],
+  "GET /api/v1/foodservice/orders/{orderId}": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/foodservice/foods/{date}/{startStation}/{endStation}/{tripId}": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/routeservice/welcome": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/routeservice/routes": [
+    "admin"
+  ],
+  "DELETE /api/v1/routeservice/routes/{routeId}": [
+    "admin"
+  ],
+  "GET /api/v1/routeservice/routes/{routeId}": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/routeservice/routes": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/routeservice/routes/{startId}/{terminalId}": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/basicservice/welcome": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/basicservice/basic/travel": [
+    "admin",
+    "user"
+  ],
+  "GET /api/v1/basicservice/basic/{stationName}": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/orderservice/order/{}": [
+    "admin",
+    "user"
+  ],
+  "POST /api/v1/orderOtherService/orderOther/{}": [
+    "admin",
+    "user"
+  ]
+}

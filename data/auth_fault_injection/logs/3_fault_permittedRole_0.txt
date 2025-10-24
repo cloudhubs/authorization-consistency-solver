@@ -1,0 +1,3 @@
+Endpoint authorized roles for GET /api/v1/stationservice/stations/name/{?} changed from 7 => 2.
+Endpoint authorized roles for POST /api/v1/adminbasicservice/adminbasic/configs changed from 4 => 3.
+Endpoint authorized roles for GET /api/v1/foodservice/orders changed from 7 => 5.

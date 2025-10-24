@@ -1,0 +1,2726 @@
+{
+   "name": "train-ticket",
+   "systemRoles": {
+      "1": "UnauthenticatedRole",
+      "2": "user",
+      "4": "admin"
+   },
+   "microservices": [
+      {
+         "name": "ts-route-plan-service",
+         "endpoints": [
+            {
+               "name": "POST /api/v1/routeplanservice/routePlan/cheapestRoute",
+               "funcName": "plan.controller.RoutePlanController#getCheapestRoutes",
+               "allowedRoles": 7,
+               "repositories": []
+            },
+            {
+               "name": "POST /api/v1/routeplanservice/routePlan/quickestRoute",
+               "funcName": "plan.controller.RoutePlanController#getQuickestRoutes",
+               "allowedRoles": 7,
+               "repositories": []
+            },
+            {
+               "name": "POST /api/v1/routeplanservice/routePlan/minStopStations",
+               "funcName": "plan.controller.RoutePlanController#getMinStopStations",
+               "allowedRoles": 7,
+               "repositories": []
+            },
+            {
+               "name": "GET /api/v1/routeplanservice/welcome",
+               "funcName": "plan.controller.RoutePlanController#home",
+               "allowedRoles": 7,
+               "repositories": []
+            }
+         ]
+      },
+      {
+         "name": "ts-food-map-service",
+         "endpoints": [
+            {
+               "name": "GET /api/v1/foodmapservice/trainfoods",
+               "funcName": "food.controller.TrainFoodController#getAllTrainFood",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "TrainFoodRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/foodmapservice/trainfoods/{?}",
+               "funcName": "food.controller.TrainFoodController#getTrainFoodOfTrip",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "TrainFoodRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/foodmapservice/trainfoods/welcome",
+               "funcName": "food.controller.TrainFoodController#home",
+               "allowedRoles": 7,
+               "repositories": []
+            },
+            {
+               "name": "GET /api/v1/foodmapservice/foodstores/{?}",
+               "funcName": "food.controller.FoodStoreController#getFoodStoresOfStation",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "FoodStoreRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/foodmapservice/foodstores",
+               "funcName": "food.controller.FoodStoreController#getAllFoodStores",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "FoodStoreRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "POST /api/v1/foodmapservice/foodstores",
+               "funcName": "food.controller.FoodStoreController#getFoodStoresByStationIds",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "FoodStoreRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/foodmapservice/foodstores/welcome",
+               "funcName": "food.controller.FoodStoreController#home",
+               "allowedRoles": 7,
+               "repositories": []
+            }
+         ]
+      },
+      {
+         "name": "ts-preserve-other-service",
+         "endpoints": [
+            {
+               "name": "POST /api/v1/preserveotherservice/preserveOther",
+               "funcName": "preserveOther.controller.PreserveOtherController#preserve",
+               "allowedRoles": 6,
+               "repositories": []
+            },
+            {
+               "name": "GET /api/v1/preserveotherservice/welcome",
+               "funcName": "preserveOther.controller.PreserveOtherController#home",
+               "allowedRoles": 6,
+               "repositories": []
+            }
+         ]
+      },
+      {
+         "name": "ts-travel2-service",
+         "endpoints": [
+            {
+               "name": "DELETE /api/v1/travel2service/trips/{?}",
+               "funcName": "travel2.controller.Travel2Controller#deleteTrip",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "TripRepository",
+                     "accessedMethods": 5
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/travel2service/routes/{?}",
+               "funcName": "travel2.controller.Travel2Controller#getRouteByTripId",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "TripRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "POST /api/v1/travel2service/trips",
+               "funcName": "travel2.controller.Travel2Controller#createTrip",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "TripRepository",
+                     "accessedMethods": 12
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/travel2service/train_types/{?}",
+               "funcName": "travel2.controller.Travel2Controller#getTrainTypeByTripId",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "TripRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/travel2service/trips/{?}",
+               "funcName": "travel2.controller.Travel2Controller#retrieve",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "TripRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "POST /api/v1/travel2service/trips/routes",
+               "funcName": "travel2.controller.Travel2Controller#getTripsByRouteId",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "TripRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "POST /api/v1/travel2service/trips/left",
+               "funcName": "travel2.controller.Travel2Controller#queryInfo",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "TripRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "PUT /api/v1/travel2service/trips",
+               "funcName": "travel2.controller.Travel2Controller#updateTrip",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "TripRepository",
+                     "accessedMethods": 6
+                  }
+               ]
+            },
+            {
+               "name": "POST /api/v1/travel2service/trip_detail",
+               "funcName": "travel2.controller.Travel2Controller#getTripAllDetailInfo",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "TripRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/travel2service/trips",
+               "funcName": "travel2.controller.Travel2Controller#queryAll",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "TripRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/travel2service/admin_trip",
+               "funcName": "travel2.controller.Travel2Controller#adminQueryAll",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "TripRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/travel2service/welcome",
+               "funcName": "travel2.controller.Travel2Controller#home",
+               "allowedRoles": 7,
+               "repositories": []
+            }
+         ]
+      },
+      {
+         "name": "ts-user-service",
+         "endpoints": [
+            {
+               "name": "GET /api/v1/userservice/users",
+               "funcName": "user.controller.UserController#getAllUser",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "UserRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/userservice/users/id/{?}",
+               "funcName": "user.controller.UserController#getUserByUserId",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "UserRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "POST /api/v1/userservice/users/register",
+               "funcName": "user.controller.UserController#registerUser",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "UserRepository",
+                     "accessedMethods": 12
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/userservice/users/hello",
+               "funcName": "user.controller.UserController#testHello",
+               "allowedRoles": 7,
+               "repositories": []
+            },
+            {
+               "name": "DELETE /api/v1/userservice/users/{?}",
+               "funcName": "user.controller.UserController#deleteUserById",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "UserRepository",
+                     "accessedMethods": 5
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/userservice/users/{?}",
+               "funcName": "user.controller.UserController#getUserByUserName",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "UserRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "PUT /api/v1/userservice/users",
+               "funcName": "user.controller.UserController#updateUser",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "UserRepository",
+                     "accessedMethods": 7
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "name": "ts-notification-service",
+         "endpoints": [
+            {
+               "name": "POST /api/v1/notifyservice/notification/order_changed_success",
+               "funcName": "notification.controller.NotificationController#order_changed_success",
+               "allowedRoles": 6,
+               "repositories": []
+            },
+            {
+               "name": "GET /api/v1/notifyservice/welcome",
+               "funcName": "notification.controller.NotificationController#home",
+               "allowedRoles": 6,
+               "repositories": []
+            },
+            {
+               "name": "POST /api/v1/notifyservice/notification/order_cancel_success",
+               "funcName": "notification.controller.NotificationController#order_cancel_success",
+               "allowedRoles": 6,
+               "repositories": []
+            },
+            {
+               "name": "POST /api/v1/notifyservice/notification/preserve_success",
+               "funcName": "notification.controller.NotificationController#preserve_success",
+               "allowedRoles": 6,
+               "repositories": []
+            },
+            {
+               "name": "POST /api/v1/notifyservice/notification/order_create_success",
+               "funcName": "notification.controller.NotificationController#order_create_success",
+               "allowedRoles": 6,
+               "repositories": []
+            }
+         ]
+      },
+      {
+         "name": "ts-ticketinfo-service",
+         "endpoints": [
+            {
+               "name": "GET /api/v1/ticketinfoservice/welcome",
+               "funcName": "ticketinfo.controller.TicketInfoController#home",
+               "allowedRoles": 7,
+               "repositories": []
+            },
+            {
+               "name": "POST /api/v1/ticketinfoservice/ticketinfo",
+               "funcName": "ticketinfo.controller.TicketInfoController#queryForTravel",
+               "allowedRoles": 7,
+               "repositories": []
+            },
+            {
+               "name": "GET /api/v1/ticketinfoservice/ticketinfo/{?}",
+               "funcName": "ticketinfo.controller.TicketInfoController#queryForStationId",
+               "allowedRoles": 7,
+               "repositories": []
+            }
+         ]
+      },
+      {
+         "name": "ts-consign-price-service",
+         "endpoints": [
+            {
+               "name": "GET /api/v1/consignpriceservice/consignprice/config",
+               "funcName": "consignprice.controller.ConsignPriceController#getPriceConfig",
+               "allowedRoles": 6,
+               "repositories": [
+                  {
+                     "name": "ConsignPriceConfigRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/consignpriceservice/welcome",
+               "funcName": "consignprice.controller.ConsignPriceController#home",
+               "allowedRoles": 6,
+               "repositories": []
+            },
+            {
+               "name": "GET /api/v1/consignpriceservice/consignprice/{?}/{?}",
+               "funcName": "consignprice.controller.ConsignPriceController#getPriceByWeightAndRegion",
+               "allowedRoles": 6,
+               "repositories": [
+                  {
+                     "name": "ConsignPriceConfigRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/consignpriceservice/consignprice/price",
+               "funcName": "consignprice.controller.ConsignPriceController#getPriceInfo",
+               "allowedRoles": 6,
+               "repositories": [
+                  {
+                     "name": "ConsignPriceConfigRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "POST /api/v1/consignpriceservice/consignprice",
+               "funcName": "consignprice.controller.ConsignPriceController#modifyPriceConfig",
+               "allowedRoles": 6,
+               "repositories": [
+                  {
+                     "name": "ConsignPriceConfigRepository",
+                     "accessedMethods": 14
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "name": "micro-service-monitoring-core",
+         "endpoints": []
+      },
+      {
+         "name": "ts-food-service",
+         "endpoints": [
+            {
+               "name": "DELETE /api/v1/foodservice/orders/{?}",
+               "funcName": "foodsearch.controller.FoodController#deleteFoodOrder",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "FoodOrderRepository",
+                     "accessedMethods": 5
+                  }
+               ]
+            },
+            {
+               "name": "POST /api/v1/foodservice/orders",
+               "funcName": "foodsearch.controller.FoodController#createFoodOrder",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "FoodOrderRepository",
+                     "accessedMethods": 12
+                  }
+               ]
+            },
+            {
+               "name": "PUT /api/v1/foodservice/orders",
+               "funcName": "foodsearch.controller.FoodController#updateFoodOrder",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "FoodOrderRepository",
+                     "accessedMethods": 6
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/foodservice/orders/{?}",
+               "funcName": "foodsearch.controller.FoodController#findFoodOrderByOrderId",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "FoodOrderRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/foodservice/foods/{?}/{?}/{?}/{?}",
+               "funcName": "foodsearch.controller.FoodController#getAllFood",
+               "allowedRoles": 7,
+               "repositories": []
+            },
+            {
+               "name": "GET /api/v1/foodservice/welcome",
+               "funcName": "foodsearch.controller.FoodController#home",
+               "allowedRoles": 7,
+               "repositories": []
+            },
+            {
+               "name": "GET /api/v1/foodservice/orders",
+               "funcName": "foodsearch.controller.FoodController#findAllFoodOrder",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "FoodOrderRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "name": "ts-common",
+         "endpoints": []
+      },
+      {
+         "name": "ts-admin-route-service",
+         "endpoints": [
+            {
+               "name": "GET /api/v1/adminrouteservice/welcome",
+               "funcName": "adminroute.controller.AdminRouteController#home",
+               "allowedRoles": 4,
+               "repositories": []
+            },
+            {
+               "name": "GET /api/v1/adminrouteservice/adminroute",
+               "funcName": "adminroute.controller.AdminRouteController#getAllRoutes",
+               "allowedRoles": 4,
+               "repositories": []
+            },
+            {
+               "name": "DELETE /api/v1/adminrouteservice/adminroute/{?}",
+               "funcName": "adminroute.controller.AdminRouteController#deleteRoute",
+               "allowedRoles": 4,
+               "repositories": []
+            },
+            {
+               "name": "POST /api/v1/adminrouteservice/adminroute",
+               "funcName": "adminroute.controller.AdminRouteController#addRoute",
+               "allowedRoles": 4,
+               "repositories": []
+            }
+         ]
+      },
+      {
+         "name": "ts-basic-service",
+         "endpoints": [
+            {
+               "name": "GET /api/v1/basicservice/basic/{?}",
+               "funcName": "fdse.microservice.controller.BasicController#queryForStationId",
+               "allowedRoles": 7,
+               "repositories": []
+            },
+            {
+               "name": "POST /api/v1/basicservice/basic/travel",
+               "funcName": "fdse.microservice.controller.BasicController#queryForTravel",
+               "allowedRoles": 7,
+               "repositories": []
+            },
+            {
+               "name": "GET /api/v1/basicservice/welcome",
+               "funcName": "fdse.microservice.controller.BasicController#home",
+               "allowedRoles": 7,
+               "repositories": []
+            }
+         ]
+      },
+      {
+         "name": "ts-seat-service",
+         "endpoints": [
+            {
+               "name": "POST /api/v1/seatservice/seats",
+               "funcName": "seat.controller.SeatController#create",
+               "allowedRoles": 7,
+               "repositories": []
+            },
+            {
+               "name": "POST /api/v1/seatservice/seats/left_tickets",
+               "funcName": "seat.controller.SeatController#getLeftTicketOfInterval",
+               "allowedRoles": 7,
+               "repositories": []
+            },
+            {
+               "name": "GET /api/v1/seatservice/welcome",
+               "funcName": "seat.controller.SeatController#home",
+               "allowedRoles": 7,
+               "repositories": []
+            }
+         ]
+      },
+      {
+         "name": "ts-security-service",
+         "endpoints": [
+            {
+               "name": "PUT /api/v1/securityservice/securityConfigs",
+               "funcName": "security.controller.SecurityController#update",
+               "allowedRoles": 6,
+               "repositories": [
+                  {
+                     "name": "SecurityRepository",
+                     "accessedMethods": 6
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/securityservice/securityConfigs/{?}",
+               "funcName": "security.controller.SecurityController#check",
+               "allowedRoles": 6,
+               "repositories": [
+                  {
+                     "name": "SecurityRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "POST /api/v1/securityservice/securityConfigs",
+               "funcName": "security.controller.SecurityController#create",
+               "allowedRoles": 6,
+               "repositories": [
+                  {
+                     "name": "SecurityRepository",
+                     "accessedMethods": 12
+                  }
+               ]
+            },
+            {
+               "name": "DELETE /api/v1/securityservice/securityConfigs/{?}",
+               "funcName": "security.controller.SecurityController#delete",
+               "allowedRoles": 6,
+               "repositories": [
+                  {
+                     "name": "SecurityRepository",
+                     "accessedMethods": 5
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/securityservice/welcome",
+               "funcName": "security.controller.SecurityController#home",
+               "allowedRoles": 6,
+               "repositories": []
+            },
+            {
+               "name": "GET /api/v1/securityservice/securityConfigs",
+               "funcName": "security.controller.SecurityController#findAllSecurityConfig",
+               "allowedRoles": 6,
+               "repositories": [
+                  {
+                     "name": "SecurityRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "name": "ts-assurance-service",
+         "endpoints": [
+            {
+               "name": "GET /api/v1/assuranceservice/assurances",
+               "funcName": "assurance.controller.AssuranceController#getAllAssurances",
+               "allowedRoles": 2,
+               "repositories": [
+                  {
+                     "name": "AssuranceRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "PATCH /api/v1/assuranceservice/assurances/{?}/{?}/{?}",
+               "funcName": "assurance.controller.AssuranceController#modifyAssurance",
+               "allowedRoles": 2,
+               "repositories": [
+                  {
+                     "name": "AssuranceRepository",
+                     "accessedMethods": 6
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/assuranceservice/assurances/types",
+               "funcName": "assurance.controller.AssuranceController#getAllAssuranceType",
+               "allowedRoles": 2,
+               "repositories": []
+            },
+            {
+               "name": "DELETE /api/v1/assuranceservice/assurances/orderid/{?}",
+               "funcName": "assurance.controller.AssuranceController#deleteAssuranceByOrderId",
+               "allowedRoles": 2,
+               "repositories": [
+                  {
+                     "name": "AssuranceRepository",
+                     "accessedMethods": 5
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/assuranceservice/assurances/assuranceid/{?}",
+               "funcName": "assurance.controller.AssuranceController#getAssuranceById",
+               "allowedRoles": 2,
+               "repositories": [
+                  {
+                     "name": "AssuranceRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "DELETE /api/v1/assuranceservice/assurances/assuranceid/{?}",
+               "funcName": "assurance.controller.AssuranceController#deleteAssurance",
+               "allowedRoles": 2,
+               "repositories": [
+                  {
+                     "name": "AssuranceRepository",
+                     "accessedMethods": 5
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/assuranceservice/welcome",
+               "funcName": "assurance.controller.AssuranceController#home",
+               "allowedRoles": 2,
+               "repositories": []
+            },
+            {
+               "name": "GET /api/v1/assuranceservice/assurance/orderid/{?}",
+               "funcName": "assurance.controller.AssuranceController#findAssuranceByOrderId",
+               "allowedRoles": 2,
+               "repositories": [
+                  {
+                     "name": "AssuranceRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/assuranceservice/assurances/{?}/{?}",
+               "funcName": "assurance.controller.AssuranceController#createNewAssurance",
+               "allowedRoles": 2,
+               "repositories": [
+                  {
+                     "name": "AssuranceRepository",
+                     "accessedMethods": 12
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "name": "ts-route-service",
+         "endpoints": [
+            {
+               "name": "GET /api/v1/routeservice/welcome",
+               "funcName": "route.controller.RouteController#home",
+               "allowedRoles": 7,
+               "repositories": []
+            },
+            {
+               "name": "GET /api/v1/routeservice/routes/{?}",
+               "funcName": "route.controller.RouteController#queryById",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "RouteRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/routeservice/routes/{?}/{?}",
+               "funcName": "route.controller.RouteController#queryByStartAndTerminal",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "RouteRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "POST /api/v1/routeservice/routes",
+               "funcName": "route.controller.RouteController#createAndModifyRoute",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "RouteRepository",
+                     "accessedMethods": 14
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/routeservice/routes",
+               "funcName": "route.controller.RouteController#queryAll",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "RouteRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "DELETE /api/v1/routeservice/routes/{?}",
+               "funcName": "route.controller.RouteController#deleteRoute",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "RouteRepository",
+                     "accessedMethods": 5
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "name": "ts-config-service",
+         "endpoints": [
+            {
+               "name": "GET /api/v1/configservice/configs/{?}",
+               "funcName": "config.controller.ConfigController#retrieve",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "ConfigRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/configservice/welcome",
+               "funcName": "config.controller.ConfigController#home",
+               "allowedRoles": 7,
+               "repositories": []
+            },
+            {
+               "name": "POST /api/v1/configservice/configs",
+               "funcName": "config.controller.ConfigController#createConfig",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "ConfigRepository",
+                     "accessedMethods": 12
+                  }
+               ]
+            },
+            {
+               "name": "DELETE /api/v1/configservice/configs/{?}",
+               "funcName": "config.controller.ConfigController#deleteConfig",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "ConfigRepository",
+                     "accessedMethods": 5
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/configservice/configs",
+               "funcName": "config.controller.ConfigController#queryAll",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "ConfigRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "PUT /api/v1/configservice/configs",
+               "funcName": "config.controller.ConfigController#updateConfig",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "ConfigRepository",
+                     "accessedMethods": 6
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "name": "services-analysis",
+         "endpoints": []
+      },
+      {
+         "name": "ts-travel-service",
+         "endpoints": [
+            {
+               "name": "GET /api/v1/travelservice/trips/{?}",
+               "funcName": "travel.controller.TravelController#retrieve",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "TripRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "PUT /api/v1/travelservice/trips",
+               "funcName": "travel.controller.TravelController#updateTrip",
+               "allowedRoles": 4,
+               "repositories": [
+                  {
+                     "name": "TripRepository",
+                     "accessedMethods": 6
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/travelservice/admin_trip",
+               "funcName": "travel.controller.TravelController#adminQueryAll",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "TripRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "POST /api/v1/travelservice/trips",
+               "funcName": "travel.controller.TravelController#createTrip",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "TripRepository",
+                     "accessedMethods": 12
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/travelservice/train_types/{?}",
+               "funcName": "travel.controller.TravelController#getTrainTypeByTripId",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "TripRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/travelservice/trips",
+               "funcName": "travel.controller.TravelController#queryAll",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "TripRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "POST /api/v1/travelservice/trip_detail",
+               "funcName": "travel.controller.TravelController#getTripAllDetailInfo",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "TripRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "POST /api/v1/travelservice/trips/left",
+               "funcName": "travel.controller.TravelController#queryInfo",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "TripRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "DELETE /api/v1/travelservice/trips/{?}",
+               "funcName": "travel.controller.TravelController#deleteTrip",
+               "allowedRoles": 4,
+               "repositories": [
+                  {
+                     "name": "TripRepository",
+                     "accessedMethods": 5
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/travelservice/routes/{?}",
+               "funcName": "travel.controller.TravelController#getRouteByTripId",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "TripRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "POST /api/v1/travelservice/trips/routes",
+               "funcName": "travel.controller.TravelController#getTripsByRouteId",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "TripRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/travelservice/welcome",
+               "funcName": "travel.controller.TravelController#home",
+               "allowedRoles": 7,
+               "repositories": []
+            }
+         ]
+      },
+      {
+         "name": "ts-verification-code-service",
+         "endpoints": [
+            {
+               "name": "GET /api/v1/verifycode/verify/{?}",
+               "funcName": "verifycode.controller.VerifyCodeController#verifyCode",
+               "allowedRoles": 7,
+               "repositories": []
+            },
+            {
+               "name": "GET /api/v1/verifycode/generate",
+               "funcName": "verifycode.controller.VerifyCodeController#imageCode",
+               "allowedRoles": 7,
+               "repositories": []
+            }
+         ]
+      },
+      {
+         "name": "ts-ui-test",
+         "endpoints": []
+      },
+      {
+         "name": "ts-travel-plan-service",
+         "endpoints": [
+            {
+               "name": "POST /api/v1/travelplanservice/travelPlan/minStation",
+               "funcName": "travelplan.controller.TravelPlanController#getByMinStation",
+               "allowedRoles": 7,
+               "repositories": []
+            },
+            {
+               "name": "GET /api/v1/travelplanservice/welcome",
+               "funcName": "travelplan.controller.TravelPlanController#home",
+               "allowedRoles": 7,
+               "repositories": []
+            },
+            {
+               "name": "POST /api/v1/travelplanservice/travelPlan/cheapest",
+               "funcName": "travelplan.controller.TravelPlanController#getByCheapest",
+               "allowedRoles": 7,
+               "repositories": []
+            },
+            {
+               "name": "POST /api/v1/travelplanservice/travelPlan/quickest",
+               "funcName": "travelplan.controller.TravelPlanController#getByQuickest",
+               "allowedRoles": 7,
+               "repositories": []
+            },
+            {
+               "name": "POST /api/v1/travelplanservice/travelPlan/transferResult",
+               "funcName": "travelplan.controller.TravelPlanController#getTransferResult",
+               "allowedRoles": 7,
+               "repositories": []
+            }
+         ]
+      },
+      {
+         "name": "ts-cancel-service",
+         "endpoints": [
+            {
+               "name": "GET /api/v1/cancelservice/welcome",
+               "funcName": "cancel.controller.CancelController#home",
+               "allowedRoles": 6,
+               "repositories": []
+            },
+            {
+               "name": "GET /api/v1/cancelservice/cancel/refound/{?}",
+               "funcName": "cancel.controller.CancelController#calculate",
+               "allowedRoles": 6,
+               "repositories": []
+            },
+            {
+               "name": "GET /api/v1/cancelservice/cancel/{?}/{?}",
+               "funcName": "cancel.controller.CancelController#cancelTicket",
+               "allowedRoles": 6,
+               "repositories": []
+            }
+         ]
+      },
+      {
+         "name": "ts-order-service",
+         "endpoints": [
+            {
+               "name": "PUT /api/v1/orderservice/order/admin",
+               "funcName": "order.controller.OrderController#updateOrder",
+               "allowedRoles": 4,
+               "repositories": [
+                  {
+                     "name": "OrderRepository",
+                     "accessedMethods": 6
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/orderservice/order/{?}/{?}",
+               "funcName": "order.controller.OrderController#calculateSoldTicket",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "OrderRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/orderservice/order/status/{?}/{?}",
+               "funcName": "order.controller.OrderController#modifyOrder",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "OrderRepository",
+                     "accessedMethods": 6
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/orderservice/order/orderPay/{?}",
+               "funcName": "order.controller.OrderController#payOrder",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "OrderRepository",
+                     "accessedMethods": 6
+                  }
+               ]
+            },
+            {
+               "name": "PUT /api/v1/orderservice/order",
+               "funcName": "order.controller.OrderController#saveOrderInfo",
+               "allowedRoles": 6,
+               "repositories": [
+                  {
+                     "name": "OrderRepository",
+                     "accessedMethods": 12
+                  }
+               ]
+            },
+            {
+               "name": "POST /api/v1/orderservice/order/admin",
+               "funcName": "order.controller.OrderController#addcreateNewOrder",
+               "allowedRoles": 4,
+               "repositories": [
+                  {
+                     "name": "OrderRepository",
+                     "accessedMethods": 12
+                  }
+               ]
+            },
+            {
+               "name": "POST /api/v1/orderservice/order/refresh",
+               "funcName": "order.controller.OrderController#queryOrdersForRefresh",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "OrderRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/orderservice/order/price/{?}",
+               "funcName": "order.controller.OrderController#getOrderPrice",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "OrderRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/orderservice/order",
+               "funcName": "order.controller.OrderController#findAllOrder",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "OrderRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/orderservice/order/security/{?}/{?}",
+               "funcName": "order.controller.OrderController#securityInfoCheck",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "OrderRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "POST /api/v1/orderservice/order",
+               "funcName": "order.controller.OrderController#createNewOrder",
+               "allowedRoles": 6,
+               "repositories": [
+                  {
+                     "name": "OrderRepository",
+                     "accessedMethods": 12
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/orderservice/order/{?}",
+               "funcName": "order.controller.OrderController#getOrderById",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "OrderRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "POST /api/v1/orderservice/order/tickets",
+               "funcName": "order.controller.OrderController#getTicketListByDateAndTripId",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "OrderRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "POST /api/v1/orderservice/order/query",
+               "funcName": "order.controller.OrderController#queryOrders",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "OrderRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "DELETE /api/v1/orderservice/order/{?}",
+               "funcName": "order.controller.OrderController#deleteOrder",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "OrderRepository",
+                     "accessedMethods": 5
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/orderservice/welcome",
+               "funcName": "order.controller.OrderController#home",
+               "allowedRoles": 6,
+               "repositories": []
+            }
+         ]
+      },
+      {
+         "name": "ts-contacts-service",
+         "endpoints": [
+            {
+               "name": "GET /api/v1/contactservice/contacts/welcome",
+               "funcName": "contacts.controller.ContactsController#home",
+               "allowedRoles": 6,
+               "repositories": []
+            },
+            {
+               "name": "POST /api/v1/contactservice/contacts",
+               "funcName": "contacts.controller.ContactsController#createNewContacts",
+               "allowedRoles": 6,
+               "repositories": [
+                  {
+                     "name": "ContactsRepository",
+                     "accessedMethods": 12
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/contactservice/contacts/account/{?}",
+               "funcName": "contacts.controller.ContactsController#findContactsByAccountId",
+               "allowedRoles": 6,
+               "repositories": [
+                  {
+                     "name": "ContactsRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "POST /api/v1/contactservice/contacts/admin",
+               "funcName": "contacts.controller.ContactsController#createNewContactsAdmin",
+               "allowedRoles": 6,
+               "repositories": [
+                  {
+                     "name": "ContactsRepository",
+                     "accessedMethods": 12
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/contactservice/contacts/{?}",
+               "funcName": "contacts.controller.ContactsController#getContactsByContactsId",
+               "allowedRoles": 6,
+               "repositories": [
+                  {
+                     "name": "ContactsRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "PUT /api/v1/contactservice/contacts",
+               "funcName": "contacts.controller.ContactsController#modifyContacts",
+               "allowedRoles": 6,
+               "repositories": [
+                  {
+                     "name": "ContactsRepository",
+                     "accessedMethods": 6
+                  }
+               ]
+            },
+            {
+               "name": "DELETE /api/v1/contactservice/contacts/{?}",
+               "funcName": "contacts.controller.ContactsController#deleteContacts",
+               "allowedRoles": 6,
+               "repositories": [
+                  {
+                     "name": "ContactsRepository",
+                     "accessedMethods": 5
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/contactservice/contacts",
+               "funcName": "contacts.controller.ContactsController#getAllContacts",
+               "allowedRoles": 6,
+               "repositories": [
+                  {
+                     "name": "ContactsRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "name": "ts-price-service",
+         "endpoints": [
+            {
+               "name": "GET /api/v1/priceservice/prices/{?}/{?}",
+               "funcName": "price.controller.PriceController#query",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "PriceConfigRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/priceservice/prices",
+               "funcName": "price.controller.PriceController#queryAll",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "PriceConfigRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "POST /api/v1/priceservice/prices",
+               "funcName": "price.controller.PriceController#create",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "PriceConfigRepository",
+                     "accessedMethods": 14
+                  }
+               ]
+            },
+            {
+               "name": "DELETE /api/v1/priceservice/prices",
+               "funcName": "price.controller.PriceController#delete",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "PriceConfigRepository",
+                     "accessedMethods": 5
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/priceservice/prices/welcome",
+               "funcName": "price.controller.PriceController#home",
+               "allowedRoles": 7,
+               "repositories": []
+            },
+            {
+               "name": "PUT /api/v1/priceservice/prices",
+               "funcName": "price.controller.PriceController#update",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "PriceConfigRepository",
+                     "accessedMethods": 6
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "name": "ts-admin-order-service",
+         "endpoints": [
+            {
+               "name": "POST /api/v1/adminorderservice/adminorder",
+               "funcName": "adminorder.controller.AdminOrderController#addOrder",
+               "allowedRoles": 4,
+               "repositories": []
+            },
+            {
+               "name": "GET /api/v1/adminorderservice/welcome",
+               "funcName": "adminorder.controller.AdminOrderController#home",
+               "allowedRoles": 4,
+               "repositories": []
+            },
+            {
+               "name": "DELETE /api/v1/adminorderservice/adminorder/{?}/{?}",
+               "funcName": "adminorder.controller.AdminOrderController#deleteOrder",
+               "allowedRoles": 4,
+               "repositories": []
+            },
+            {
+               "name": "GET /api/v1/adminorderservice/adminorder",
+               "funcName": "adminorder.controller.AdminOrderController#getAllOrders",
+               "allowedRoles": 4,
+               "repositories": []
+            },
+            {
+               "name": "PUT /api/v1/adminorderservice/adminorder",
+               "funcName": "adminorder.controller.AdminOrderController#updateOrder",
+               "allowedRoles": 4,
+               "repositories": []
+            }
+         ]
+      },
+      {
+         "name": "ts-payment-service",
+         "endpoints": [
+            {
+               "name": "POST /api/v1/paymentservice/payment/money",
+               "funcName": "com.trainticket.controller.PaymentController#addMoney",
+               "allowedRoles": 6,
+               "repositories": [
+                  {
+                     "name": "AddMoneyRepository",
+                     "accessedMethods": 8
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/paymentservice/welcome",
+               "funcName": "com.trainticket.controller.PaymentController#home",
+               "allowedRoles": 6,
+               "repositories": []
+            },
+            {
+               "name": "GET /api/v1/paymentservice/payment",
+               "funcName": "com.trainticket.controller.PaymentController#query",
+               "allowedRoles": 6,
+               "repositories": [
+                  {
+                     "name": "PaymentRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "POST /api/v1/paymentservice/payment",
+               "funcName": "com.trainticket.controller.PaymentController#pay",
+               "allowedRoles": 6,
+               "repositories": [
+                  {
+                     "name": "PaymentRepository",
+                     "accessedMethods": 12
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "name": "ts-execute-service",
+         "endpoints": [
+            {
+               "name": "GET /api/v1/executeservice/execute/collected/{?}",
+               "funcName": "execute.controller.ExecuteControlller#collectTicket",
+               "allowedRoles": 6,
+               "repositories": []
+            },
+            {
+               "name": "GET /api/v1/executeservice/execute/execute/{?}",
+               "funcName": "execute.controller.ExecuteControlller#executeTicket",
+               "allowedRoles": 6,
+               "repositories": []
+            },
+            {
+               "name": "GET /api/v1/executeservice/welcome",
+               "funcName": "execute.controller.ExecuteControlller#home",
+               "allowedRoles": 6,
+               "repositories": []
+            }
+         ]
+      },
+      {
+         "name": "ts-inside-payment-service",
+         "endpoints": [
+            {
+               "name": "POST /api/v1/inside_pay_service/inside_payment",
+               "funcName": "inside_payment.controller.InsidePaymentController#pay",
+               "allowedRoles": 6,
+               "repositories": [
+                  {
+                     "name": "PaymentRepository",
+                     "accessedMethods": 12
+                  },
+                  {
+                     "name": "AddMoneyRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/inside_pay_service/inside_payment/money",
+               "funcName": "inside_payment.controller.InsidePaymentController#queryAddMoney",
+               "allowedRoles": 6,
+               "repositories": [
+                  {
+                     "name": "AddMoneyRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/inside_pay_service/inside_payment/{?}/{?}",
+               "funcName": "inside_payment.controller.InsidePaymentController#addMoney",
+               "allowedRoles": 6,
+               "repositories": [
+                  {
+                     "name": "AddMoneyRepository",
+                     "accessedMethods": 12
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/inside_pay_service/inside_payment/payment",
+               "funcName": "inside_payment.controller.InsidePaymentController#queryPayment",
+               "allowedRoles": 6,
+               "repositories": [
+                  {
+                     "name": "PaymentRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/inside_pay_service/inside_payment/account",
+               "funcName": "inside_payment.controller.InsidePaymentController#queryAccount",
+               "allowedRoles": 6,
+               "repositories": [
+                  {
+                     "name": "AddMoneyRepository",
+                     "accessedMethods": 4
+                  },
+                  {
+                     "name": "PaymentRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "POST /api/v1/inside_pay_service/inside_payment/account",
+               "funcName": "inside_payment.controller.InsidePaymentController#createAccount",
+               "allowedRoles": 6,
+               "repositories": [
+                  {
+                     "name": "AddMoneyRepository",
+                     "accessedMethods": 12
+                  }
+               ]
+            },
+            {
+               "name": "POST /api/v1/inside_pay_service/inside_payment/difference",
+               "funcName": "inside_payment.controller.InsidePaymentController#payDifference",
+               "allowedRoles": 6,
+               "repositories": [
+                  {
+                     "name": "PaymentRepository",
+                     "accessedMethods": 12
+                  },
+                  {
+                     "name": "AddMoneyRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/inside_pay_service/welcome",
+               "funcName": "inside_payment.controller.InsidePaymentController#home",
+               "allowedRoles": 6,
+               "repositories": []
+            },
+            {
+               "name": "GET /api/v1/inside_pay_service/inside_payment/drawback/{?}/{?}",
+               "funcName": "inside_payment.controller.InsidePaymentController#drawBack",
+               "allowedRoles": 6,
+               "repositories": [
+                  {
+                     "name": "AddMoneyRepository",
+                     "accessedMethods": 12
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "name": "ts-auth-service",
+         "endpoints": [
+            {
+               "name": "GET /api/v1/auth/hello",
+               "funcName": "auth.controller.AuthController#getHello",
+               "allowedRoles": 7,
+               "repositories": []
+            },
+            {
+               "name": "POST /api/v1/auth",
+               "funcName": "auth.controller.AuthController#createDefaultUser",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "UserRepository",
+                     "accessedMethods": 8
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/users",
+               "funcName": "auth.controller.UserController#getAllUser",
+               "allowedRoles": 4,
+               "repositories": [
+                  {
+                     "name": "UserRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "DELETE /api/v1/users/{?}",
+               "funcName": "auth.controller.UserController#deleteUserById",
+               "allowedRoles": 4,
+               "repositories": [
+                  {
+                     "name": "UserRepository",
+                     "accessedMethods": 1
+                  }
+               ]
+            },
+            {
+               "name": "POST /api/v1/users/login",
+               "funcName": "auth.controller.UserController#getToken",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "UserRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/users/hello",
+               "funcName": "auth.controller.UserController#getHello",
+               "allowedRoles": 6,
+               "repositories": []
+            }
+         ]
+      },
+      {
+         "name": "ts-train-service",
+         "endpoints": [
+            {
+               "name": "GET /api/v1/trainservice/trains/{?}",
+               "funcName": "train.controller.TrainController#retrieve",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "TrainTypeRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "PUT /api/v1/trainservice/trains",
+               "funcName": "train.controller.TrainController#update",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "TrainTypeRepository",
+                     "accessedMethods": 6
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/trainservice/trains/welcome",
+               "funcName": "train.controller.TrainController#home",
+               "allowedRoles": 7,
+               "repositories": []
+            },
+            {
+               "name": "POST /api/v1/trainservice/trains",
+               "funcName": "train.controller.TrainController#create",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "TrainTypeRepository",
+                     "accessedMethods": 12
+                  }
+               ]
+            },
+            {
+               "name": "DELETE /api/v1/trainservice/trains/{?}",
+               "funcName": "train.controller.TrainController#delete",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "TrainTypeRepository",
+                     "accessedMethods": 5
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/trainservice/trains",
+               "funcName": "train.controller.TrainController#query",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "TrainTypeRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "name": "ts-admin-user-service",
+         "endpoints": [
+            {
+               "name": "GET /api/v1/adminuserservice/users/welcome",
+               "funcName": "adminuser.controller.AdminUserController#home",
+               "allowedRoles": 4,
+               "repositories": []
+            },
+            {
+               "name": "GET /api/v1/adminuserservice/users",
+               "funcName": "adminuser.controller.AdminUserController#getAllUsers",
+               "allowedRoles": 4,
+               "repositories": []
+            },
+            {
+               "name": "PUT /api/v1/adminuserservice/users",
+               "funcName": "adminuser.controller.AdminUserController#updateUser",
+               "allowedRoles": 4,
+               "repositories": []
+            },
+            {
+               "name": "DELETE /api/v1/adminuserservice/users/{?}",
+               "funcName": "adminuser.controller.AdminUserController#deleteUser",
+               "allowedRoles": 4,
+               "repositories": []
+            },
+            {
+               "name": "POST /api/v1/adminuserservice/users",
+               "funcName": "adminuser.controller.AdminUserController#addUser",
+               "allowedRoles": 4,
+               "repositories": []
+            }
+         ]
+      },
+      {
+         "name": "ts-admin-basic-info-service",
+         "endpoints": [
+            {
+               "name": "GET /api/v1/adminbasicservice/adminbasic/prices",
+               "funcName": "adminbasic.controller.AdminBasicInfoController#getAllPrices",
+               "allowedRoles": 7,
+               "repositories": []
+            },
+            {
+               "name": "GET /api/v1/adminbasicservice/adminbasic/trains",
+               "funcName": "adminbasic.controller.AdminBasicInfoController#getAllTrains",
+               "allowedRoles": 7,
+               "repositories": []
+            },
+            {
+               "name": "GET /api/v1/adminbasicservice/adminbasic/contacts",
+               "funcName": "adminbasic.controller.AdminBasicInfoController#getAllContacts",
+               "allowedRoles": 7,
+               "repositories": []
+            },
+            {
+               "name": "DELETE /api/v1/adminbasicservice/adminbasic/stations",
+               "funcName": "adminbasic.controller.AdminBasicInfoController#deleteStation",
+               "allowedRoles": 4,
+               "repositories": []
+            },
+            {
+               "name": "PUT /api/v1/adminbasicservice/adminbasic/stations",
+               "funcName": "adminbasic.controller.AdminBasicInfoController#modifyStation",
+               "allowedRoles": 4,
+               "repositories": []
+            },
+            {
+               "name": "POST /api/v1/adminbasicservice/adminbasic/stations",
+               "funcName": "adminbasic.controller.AdminBasicInfoController#addStation",
+               "allowedRoles": 4,
+               "repositories": []
+            },
+            {
+               "name": "DELETE /api/v1/adminbasicservice/adminbasic/configs/{?}",
+               "funcName": "adminbasic.controller.AdminBasicInfoController#deleteConfig",
+               "allowedRoles": 4,
+               "repositories": []
+            },
+            {
+               "name": "POST /api/v1/adminbasicservice/adminbasic/configs",
+               "funcName": "adminbasic.controller.AdminBasicInfoController#addConfig",
+               "allowedRoles": 4,
+               "repositories": []
+            },
+            {
+               "name": "DELETE /api/v1/adminbasicservice/adminbasic/contacts/{?}",
+               "funcName": "adminbasic.controller.AdminBasicInfoController#deleteContacts",
+               "allowedRoles": 4,
+               "repositories": []
+            },
+            {
+               "name": "GET /api/v1/adminbasicservice/welcome",
+               "funcName": "adminbasic.controller.AdminBasicInfoController#home",
+               "allowedRoles": 4,
+               "repositories": []
+            },
+            {
+               "name": "POST /api/v1/adminbasicservice/adminbasic/contacts",
+               "funcName": "adminbasic.controller.AdminBasicInfoController#addContacts",
+               "allowedRoles": 4,
+               "repositories": []
+            },
+            {
+               "name": "POST /api/v1/adminbasicservice/adminbasic/trains",
+               "funcName": "adminbasic.controller.AdminBasicInfoController#addTrain",
+               "allowedRoles": 4,
+               "repositories": []
+            },
+            {
+               "name": "GET /api/v1/adminbasicservice/adminbasic/configs",
+               "funcName": "adminbasic.controller.AdminBasicInfoController#getAllConfigs",
+               "allowedRoles": 7,
+               "repositories": []
+            },
+            {
+               "name": "PUT /api/v1/adminbasicservice/adminbasic/trains",
+               "funcName": "adminbasic.controller.AdminBasicInfoController#modifyTrain",
+               "allowedRoles": 4,
+               "repositories": []
+            },
+            {
+               "name": "DELETE /api/v1/adminbasicservice/adminbasic/trains/{?}",
+               "funcName": "adminbasic.controller.AdminBasicInfoController#deleteTrain",
+               "allowedRoles": 4,
+               "repositories": []
+            },
+            {
+               "name": "DELETE /api/v1/adminbasicservice/adminbasic/prices",
+               "funcName": "adminbasic.controller.AdminBasicInfoController#deletePrice",
+               "allowedRoles": 4,
+               "repositories": []
+            },
+            {
+               "name": "PUT /api/v1/adminbasicservice/adminbasic/prices",
+               "funcName": "adminbasic.controller.AdminBasicInfoController#modifyPrice",
+               "allowedRoles": 4,
+               "repositories": []
+            },
+            {
+               "name": "POST /api/v1/adminbasicservice/adminbasic/prices",
+               "funcName": "adminbasic.controller.AdminBasicInfoController#addPrice",
+               "allowedRoles": 4,
+               "repositories": []
+            },
+            {
+               "name": "PUT /api/v1/adminbasicservice/adminbasic/configs",
+               "funcName": "adminbasic.controller.AdminBasicInfoController#modifyConfig",
+               "allowedRoles": 4,
+               "repositories": []
+            },
+            {
+               "name": "GET /api/v1/adminbasicservice/adminbasic/stations",
+               "funcName": "adminbasic.controller.AdminBasicInfoController#getAllStations",
+               "allowedRoles": 7,
+               "repositories": []
+            },
+            {
+               "name": "PUT /api/v1/adminbasicservice/adminbasic/contacts",
+               "funcName": "adminbasic.controller.AdminBasicInfoController#modifyContacts",
+               "allowedRoles": 4,
+               "repositories": []
+            }
+         ]
+      },
+      {
+         "name": "ts-consign-service",
+         "endpoints": [
+            {
+               "name": "GET /api/v1/consignservice/welcome",
+               "funcName": "consign.controller.ConsignController#home",
+               "allowedRoles": 6,
+               "repositories": []
+            },
+            {
+               "name": "PUT /api/v1/consignservice/consigns",
+               "funcName": "consign.controller.ConsignController#updateConsign",
+               "allowedRoles": 6,
+               "repositories": [
+                  {
+                     "name": "ConsignRepository",
+                     "accessedMethods": 14
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/consignservice/consigns/{?}",
+               "funcName": "consign.controller.ConsignController#findByConsignee",
+               "allowedRoles": 6,
+               "repositories": [
+                  {
+                     "name": "ConsignRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/consignservice/consigns/account/{?}",
+               "funcName": "consign.controller.ConsignController#findByAccountId",
+               "allowedRoles": 6,
+               "repositories": [
+                  {
+                     "name": "ConsignRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "POST /api/v1/consignservice/consigns",
+               "funcName": "consign.controller.ConsignController#insertConsign",
+               "allowedRoles": 6,
+               "repositories": [
+                  {
+                     "name": "ConsignRepository",
+                     "accessedMethods": 8
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/consignservice/consigns/order/{?}",
+               "funcName": "consign.controller.ConsignController#findByOrderId",
+               "allowedRoles": 6,
+               "repositories": [
+                  {
+                     "name": "ConsignRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "name": "ts-rebook-service",
+         "endpoints": [
+            {
+               "name": "POST /api/v1/rebookservice/rebook",
+               "funcName": "rebook.controller.RebookController#rebook",
+               "allowedRoles": 6,
+               "repositories": []
+            },
+            {
+               "name": "POST /api/v1/rebookservice/rebook/difference",
+               "funcName": "rebook.controller.RebookController#payDifference",
+               "allowedRoles": 6,
+               "repositories": []
+            },
+            {
+               "name": "GET /api/v1/rebookservice/welcome",
+               "funcName": "rebook.controller.RebookController#home",
+               "allowedRoles": 6,
+               "repositories": []
+            }
+         ]
+      },
+      {
+         "name": "ts-preserve-service",
+         "endpoints": [
+            {
+               "name": "GET /api/v1/preserveservice/welcome",
+               "funcName": "preserve.controller.PreserveController#home",
+               "allowedRoles": 6,
+               "repositories": []
+            },
+            {
+               "name": "POST /api/v1/preserveservice/preserve",
+               "funcName": "preserve.controller.PreserveController#preserve",
+               "allowedRoles": 6,
+               "repositories": []
+            }
+         ]
+      },
+      {
+         "name": "ts-admin-travel-service",
+         "endpoints": [
+            {
+               "name": "PUT /api/v1/admintravelservice/admintravel",
+               "funcName": "admintravel.controller.AdminTravelController#updateTravel",
+               "allowedRoles": 4,
+               "repositories": []
+            },
+            {
+               "name": "GET /api/v1/admintravelservice/admintravel",
+               "funcName": "admintravel.controller.AdminTravelController#getAllTravels",
+               "allowedRoles": 4,
+               "repositories": []
+            },
+            {
+               "name": "GET /api/v1/admintravelservice/welcome",
+               "funcName": "admintravel.controller.AdminTravelController#home",
+               "allowedRoles": 4,
+               "repositories": []
+            },
+            {
+               "name": "POST /api/v1/admintravelservice/admintravel",
+               "funcName": "admintravel.controller.AdminTravelController#addTravel",
+               "allowedRoles": 4,
+               "repositories": []
+            },
+            {
+               "name": "DELETE /api/v1/admintravelservice/admintravel/{?}",
+               "funcName": "admintravel.controller.AdminTravelController#deleteTravel",
+               "allowedRoles": 4,
+               "repositories": []
+            }
+         ]
+      },
+      {
+         "name": "ts-order-other-service",
+         "endpoints": [
+            {
+               "name": "GET /api/v1/orderOtherService/orderOther/{?}",
+               "funcName": "other.controller.OrderOtherController#getOrderById",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "OrderRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "DELETE /api/v1/orderOtherService/orderOther/{?}",
+               "funcName": "other.controller.OrderOtherController#deleteOrder",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "OrderRepository",
+                     "accessedMethods": 5
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/orderOtherService/orderOther/security/{?}/{?}",
+               "funcName": "other.controller.OrderOtherController#securityInfoCheck",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "OrderRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "POST /api/v1/orderOtherService/orderOther/tickets",
+               "funcName": "other.controller.OrderOtherController#getTicketListByDateAndTripId",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "OrderRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "PUT /api/v1/orderOtherService/orderOther/admin",
+               "funcName": "other.controller.OrderOtherController#updateOrder",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "OrderRepository",
+                     "accessedMethods": 6
+                  }
+               ]
+            },
+            {
+               "name": "POST /api/v1/orderOtherService/orderOther/query",
+               "funcName": "other.controller.OrderOtherController#queryOrders",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "OrderRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/orderOtherService/orderOther/orderPay/{?}",
+               "funcName": "other.controller.OrderOtherController#payOrder",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "OrderRepository",
+                     "accessedMethods": 6
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/orderOtherService/orderOther/status/{?}/{?}",
+               "funcName": "other.controller.OrderOtherController#modifyOrder",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "OrderRepository",
+                     "accessedMethods": 6
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/orderOtherService/orderOther/price/{?}",
+               "funcName": "other.controller.OrderOtherController#getOrderPrice",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "OrderRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "PUT /api/v1/orderOtherService/orderOther",
+               "funcName": "other.controller.OrderOtherController#saveOrderInfo",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "OrderRepository",
+                     "accessedMethods": 6
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/orderOtherService/orderOther",
+               "funcName": "other.controller.OrderOtherController#findAllOrder",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "OrderRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "POST /api/v1/orderOtherService/orderOther/refresh",
+               "funcName": "other.controller.OrderOtherController#queryOrdersForRefresh",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "OrderRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "POST /api/v1/orderOtherService/orderOther",
+               "funcName": "other.controller.OrderOtherController#createNewOrder",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "OrderRepository",
+                     "accessedMethods": 12
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/orderOtherService/welcome",
+               "funcName": "other.controller.OrderOtherController#home",
+               "allowedRoles": 6,
+               "repositories": []
+            },
+            {
+               "name": "POST /api/v1/orderOtherService/orderOther/admin",
+               "funcName": "other.controller.OrderOtherController#addcreateNewOrder",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "OrderRepository",
+                     "accessedMethods": 12
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/orderOtherService/orderOther/{?}/{?}",
+               "funcName": "other.controller.OrderOtherController#calculateSoldTicket",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "OrderRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "name": "ts-station-service",
+         "endpoints": [
+            {
+               "name": "PUT /api/v1/stationservice/stations",
+               "funcName": "fdse.microservice.controller.StationController#update",
+               "allowedRoles": 4,
+               "repositories": [
+                  {
+                     "name": "StationRepository",
+                     "accessedMethods": 6
+                  }
+               ]
+            },
+            {
+               "name": "DELETE /api/v1/stationservice/stations",
+               "funcName": "fdse.microservice.controller.StationController#delete",
+               "allowedRoles": 4,
+               "repositories": [
+                  {
+                     "name": "StationRepository",
+                     "accessedMethods": 5
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/stationservice/stations/name/{?}",
+               "funcName": "fdse.microservice.controller.StationController#queryById",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "StationRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "POST /api/v1/stationservice/stations/namelist",
+               "funcName": "fdse.microservice.controller.StationController#queryForNameBatch",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "StationRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "POST /api/v1/stationservice/stations",
+               "funcName": "fdse.microservice.controller.StationController#create",
+               "allowedRoles": 4,
+               "repositories": [
+                  {
+                     "name": "StationRepository",
+                     "accessedMethods": 12
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/stationservice/welcome",
+               "funcName": "fdse.microservice.controller.StationController#home",
+               "allowedRoles": 7,
+               "repositories": []
+            },
+            {
+               "name": "GET /api/v1/stationservice/stations/id/{?}",
+               "funcName": "fdse.microservice.controller.StationController#queryForStationId",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "StationRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "GET /api/v1/stationservice/stations",
+               "funcName": "fdse.microservice.controller.StationController#query",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "StationRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "POST /api/v1/stationservice/stations/idlist",
+               "funcName": "fdse.microservice.controller.StationController#queryForIdBatch",
+               "allowedRoles": 7,
+               "repositories": [
+                  {
+                     "name": "StationRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            }
+         ]
+      }
+   ],
+   "systemConnections": {
+      "POST /api/v1/routeplanservice/routePlan/cheapestRoute": [
+         "POST /api/v1/travel2service/trips/left",
+         "POST /api/v1/travelservice/trips/left",
+         "GET /api/v1/travelservice/routes/{?}",
+         "GET /api/v1/travel2service/routes/{?}"
+      ],
+      "POST /api/v1/routeplanservice/routePlan/quickestRoute": [
+         "POST /api/v1/travel2service/trips/left",
+         "POST /api/v1/travelservice/trips/left",
+         "GET /api/v1/travelservice/routes/{?}",
+         "GET /api/v1/travel2service/routes/{?}"
+      ],
+      "POST /api/v1/routeplanservice/routePlan/minStopStations": [
+         "GET /api/v1/routeservice/routes/{?}/{?}",
+         "POST /api/v1/travelservice/trips/routes",
+         "POST /api/v1/travel2service/trips/routes",
+         "GET /api/v1/routeservice/routes/{?}",
+         "GET /api/v1/stationservice/stations/id/{?}",
+         "POST /api/v1/travelservice/trip_detail",
+         "POST /api/v1/travel2service/trip_detail"
+      ],
+      "POST /api/v1/preserveotherservice/preserveOther": [
+         "POST /api/v1/ticketinfoservice/ticketinfo",
+         "POST /api/v1/notifyservice/notification/preserve_success",
+         "GET /api/v1/userservice/users/id/{?}",
+         "POST /api/v1/consignservice/consigns",
+         "POST /api/v1/foodservice/orders",
+         "GET /api/v1/assuranceservice/assurances/{?}/{?}",
+         "POST /api/v1/orderOtherService/orderOther",
+         "POST /api/v1/seatservice/seats",
+         "GET /api/v1/stationservice/stations/id/{?}",
+         "POST /api/v1/travel2service/trip_detail",
+         "GET /api/v1/contactservice/contacts/{?}",
+         "GET /api/v1/securityservice/securityConfigs/{?}"
+      ],
+      "GET /api/v1/travel2service/routes/{?}": [
+         "GET /api/v1/routeservice/routes/{?}"
+      ],
+      "GET /api/v1/travel2service/train_types/{?}": [
+         "GET /api/v1/trainservice/trains/{?}"
+      ],
+      "POST /api/v1/travel2service/trips/left": [
+         "POST /api/v1/ticketinfoservice/ticketinfo",
+         "GET /api/v1/orderOtherService/orderOther/{?}/{?}",
+         "GET /api/v1/trainservice/trains/{?}",
+         "POST /api/v1/seatservice/seats/left_tickets",
+         "GET /api/v1/ticketinfoservice/ticketinfo/{?}",
+         "GET /api/v1/routeservice/routes/{?}"
+      ],
+      "POST /api/v1/travel2service/trip_detail": [
+         "POST /api/v1/ticketinfoservice/ticketinfo",
+         "GET /api/v1/orderOtherService/orderOther/{?}/{?}",
+         "GET /api/v1/trainservice/trains/{?}",
+         "POST /api/v1/seatservice/seats/left_tickets",
+         "GET /api/v1/ticketinfoservice/ticketinfo/{?}",
+         "GET /api/v1/routeservice/routes/{?}"
+      ],
+      "GET /api/v1/travel2service/admin_trip": [
+         "GET /api/v1/trainservice/trains/{?}",
+         "GET /api/v1/routeservice/routes/{?}"
+      ],
+      "POST /api/v1/userservice/users/register": [
+         "POST /api/v1/auth"
+      ],
+      "DELETE /api/v1/userservice/users/{?}": [
+         "DELETE /api/v1/users/{?}"
+      ],
+      "POST /api/v1/ticketinfoservice/ticketinfo": [
+         "POST /api/v1/basicservice/basic/travel"
+      ],
+      "GET /api/v1/ticketinfoservice/ticketinfo/{?}": [
+         "GET /api/v1/basicservice/basic/{?}"
+      ],
+      "GET /api/v1/foodservice/foods/{?}/{?}/{?}/{?}": [
+         "GET /api/v1/foodmapservice/trainfoods/{?}",
+         "GET /api/v1/travelservice/routes/{?}",
+         "GET /api/v1/stationservice/stations/id/{?}",
+         "POST /api/v1/foodmapservice/foodstores"
+      ],
+      "GET /api/v1/adminrouteservice/adminroute": [
+         "GET /api/v1/routeservice/routes"
+      ],
+      "DELETE /api/v1/adminrouteservice/adminroute/{?}": [
+         "DELETE /api/v1/routeservice/routes/{?}"
+      ],
+      "POST /api/v1/adminrouteservice/adminroute": [
+         "POST /api/v1/routeservice/routes"
+      ],
+      "GET /api/v1/basicservice/basic/{?}": [
+         "GET /api/v1/stationservice/stations/id/{?}"
+      ],
+      "POST /api/v1/basicservice/basic/travel": [
+         "GET /api/v1/stationservice/stations/id/{?}",
+         "GET /api/v1/priceservice/prices/{?}/{?}",
+         "GET /api/v1/routeservice/routes/{?}",
+         "GET /api/v1/trainservice/trains/{?}"
+      ],
+      "POST /api/v1/seatservice/seats": [
+         "GET /api/v1/travelservice/routes/{?}",
+         "POST /api/v1/orderservice/order/tickets",
+         "GET /api/v1/travelservice/train_types/{?}",
+         "GET /api/v1/travel2service/routes/{?}",
+         "POST /api/v1/orderOtherService/orderOther/tickets",
+         "GET /api/v1/travel2service/train_types/{?}"
+      ],
+      "POST /api/v1/seatservice/seats/left_tickets": [
+         "GET /api/v1/travelservice/routes/{?}",
+         "POST /api/v1/orderservice/order/tickets",
+         "GET /api/v1/travelservice/train_types/{?}",
+         "GET /api/v1/travel2service/routes/{?}",
+         "POST /api/v1/orderOtherService/orderOther/tickets",
+         "GET /api/v1/travel2service/train_types/{?}",
+         "GET /api/v1/configservice/configs/{?}"
+      ],
+      "GET /api/v1/securityservice/securityConfigs/{?}": [
+         "GET /api/v1/orderOtherService/orderOther/security/{?}/{?}",
+         "GET /api/v1/orderservice/order/security/{?}/{?}"
+      ],
+      "GET /api/v1/travelservice/admin_trip": [
+         "GET /api/v1/trainservice/trains/{?}",
+         "GET /api/v1/routeservice/routes/{?}"
+      ],
+      "GET /api/v1/travelservice/train_types/{?}": [
+         "GET /api/v1/trainservice/trains/{?}"
+      ],
+      "POST /api/v1/travelservice/trip_detail": [
+         "POST /api/v1/ticketinfoservice/ticketinfo",
+         "GET /api/v1/orderservice/order/{?}/{?}",
+         "GET /api/v1/trainservice/trains/{?}",
+         "POST /api/v1/seatservice/seats/left_tickets",
+         "GET /api/v1/ticketinfoservice/ticketinfo/{?}",
+         "GET /api/v1/routeservice/routes/{?}"
+      ],
+      "POST /api/v1/travelservice/trips/left": [
+         "POST /api/v1/ticketinfoservice/ticketinfo",
+         "GET /api/v1/orderservice/order/{?}/{?}",
+         "GET /api/v1/trainservice/trains/{?}",
+         "POST /api/v1/seatservice/seats/left_tickets",
+         "GET /api/v1/ticketinfoservice/ticketinfo/{?}",
+         "GET /api/v1/routeservice/routes/{?}"
+      ],
+      "GET /api/v1/travelservice/routes/{?}": [
+         "GET /api/v1/routeservice/routes/{?}"
+      ],
+      "POST /api/v1/travelplanservice/travelPlan/minStation": [
+         "POST /api/v1/seatservice/seats/left_tickets",
+         "GET /api/v1/ticketinfoservice/ticketinfo/{?}",
+         "POST /api/v1/stationservice/stations/namelist",
+         "POST /api/v1/routeplanservice/routePlan/minStopStations"
+      ],
+      "POST /api/v1/travelplanservice/travelPlan/cheapest": [
+         "POST /api/v1/seatservice/seats/left_tickets",
+         "GET /api/v1/ticketinfoservice/ticketinfo/{?}",
+         "POST /api/v1/stationservice/stations/namelist",
+         "POST /api/v1/routeplanservice/routePlan/cheapestRoute"
+      ],
+      "POST /api/v1/travelplanservice/travelPlan/quickest": [
+         "POST /api/v1/seatservice/seats/left_tickets",
+         "GET /api/v1/ticketinfoservice/ticketinfo/{?}",
+         "POST /api/v1/stationservice/stations/namelist",
+         "POST /api/v1/routeplanservice/routePlan/quickestRoute"
+      ],
+      "POST /api/v1/travelplanservice/travelPlan/transferResult": [
+         "POST /api/v1/travel2service/trips/left",
+         "POST /api/v1/travelservice/trips/left"
+      ],
+      "GET /api/v1/cancelservice/cancel/refound/{?}": [
+         "GET /api/v1/orderOtherService/orderOther/{?}",
+         "GET /api/v1/orderservice/order/{?}"
+      ],
+      "GET /api/v1/cancelservice/cancel/{?}/{?}": [
+         "GET /api/v1/inside_pay_service/inside_payment/drawback/{?}/{?}",
+         "GET /api/v1/orderOtherService/orderOther/{?}",
+         "GET /api/v1/orderservice/order/{?}",
+         "PUT /api/v1/orderOtherService/orderOther",
+         "POST /api/v1/notifyservice/notification/order_cancel_success",
+         "GET /api/v1/userservice/users/id/{?}",
+         "PUT /api/v1/orderservice/order"
+      ],
+      "POST /api/v1/orderservice/order/refresh": [
+         "POST /api/v1/stationservice/stations/namelist"
+      ],
+      "POST /api/v1/adminorderservice/adminorder": [
+         "POST /api/v1/orderservice/order/admin",
+         "POST /api/v1/orderOtherService/orderOther/admin"
+      ],
+      "DELETE /api/v1/adminorderservice/adminorder/{?}/{?}": [
+         "DELETE /api/v1/orderservice/order/{?}",
+         "DELETE /api/v1/orderOtherService/orderOther/{?}"
+      ],
+      "GET /api/v1/adminorderservice/adminorder": [
+         "GET /api/v1/orderservice/order",
+         "GET /api/v1/orderOtherService/orderOther"
+      ],
+      "PUT /api/v1/adminorderservice/adminorder": [
+         "PUT /api/v1/orderservice/order/admin",
+         "PUT /api/v1/orderOtherService/orderOther/admin"
+      ],
+      "GET /api/v1/executeservice/execute/collected/{?}": [
+         "GET /api/v1/orderOtherService/orderOther/status/{?}/{?}",
+         "GET /api/v1/orderOtherService/orderOther/{?}",
+         "GET /api/v1/orderservice/order/status/{?}/{?}",
+         "GET /api/v1/orderservice/order/{?}"
+      ],
+      "GET /api/v1/executeservice/execute/execute/{?}": [
+         "GET /api/v1/orderOtherService/orderOther/status/{?}/{?}",
+         "GET /api/v1/orderOtherService/orderOther/{?}",
+         "GET /api/v1/orderservice/order/status/{?}/{?}",
+         "GET /api/v1/orderservice/order/{?}"
+      ],
+      "POST /api/v1/inside_pay_service/inside_payment": [
+         "POST /api/v1/paymentservice/payment",
+         "GET /api/v1/orderservice/order/status/{?}/{?}",
+         "GET /api/v1/orderOtherService/orderOther/status/{?}/{?}",
+         "GET /api/v1/orderservice/order/{?}",
+         "GET /api/v1/orderOtherService/orderOther/{?}"
+      ],
+      "POST /api/v1/inside_pay_service/inside_payment/difference": [
+         "POST /api/v1/paymentservice/payment"
+      ],
+      "POST /api/v1/users/login": [
+         "GET /api/v1/verifycode/verify/{?}"
+      ],
+      "GET /api/v1/adminuserservice/users": [
+         "GET /api/v1/userservice/users"
+      ],
+      "PUT /api/v1/adminuserservice/users": [
+         "PUT /api/v1/userservice/users"
+      ],
+      "DELETE /api/v1/adminuserservice/users/{?}": [
+         "DELETE /api/v1/userservice/users/{?}"
+      ],
+      "GET /api/v1/adminbasicservice/adminbasic/prices": [
+         "GET /api/v1/priceservice/prices"
+      ],
+      "GET /api/v1/adminbasicservice/adminbasic/trains": [
+         "GET /api/v1/trainservice/trains"
+      ],
+      "GET /api/v1/adminbasicservice/adminbasic/contacts": [
+         "GET /api/v1/contactservice/contacts"
+      ],
+      "DELETE /api/v1/adminbasicservice/adminbasic/stations": [
+         "DELETE /api/v1/stationservice/stations"
+      ],
+      "PUT /api/v1/adminbasicservice/adminbasic/stations": [
+         "PUT /api/v1/stationservice/stations"
+      ],
+      "POST /api/v1/adminbasicservice/adminbasic/stations": [
+         "POST /api/v1/stationservice/stations"
+      ],
+      "DELETE /api/v1/adminbasicservice/adminbasic/configs/{?}": [
+         "DELETE /api/v1/configservice/configs/{?}"
+      ],
+      "POST /api/v1/adminbasicservice/adminbasic/configs": [
+         "POST /api/v1/configservice/configs"
+      ],
+      "DELETE /api/v1/adminbasicservice/adminbasic/contacts/{?}": [
+         "DELETE /api/v1/contactservice/contacts/{?}"
+      ],
+      "POST /api/v1/adminbasicservice/adminbasic/contacts": [
+         "POST /api/v1/contactservice/contacts/admin"
+      ],
+      "POST /api/v1/adminbasicservice/adminbasic/trains": [
+         "POST /api/v1/trainservice/trains"
+      ],
+      "GET /api/v1/adminbasicservice/adminbasic/configs": [
+         "GET /api/v1/configservice/configs"
+      ],
+      "PUT /api/v1/adminbasicservice/adminbasic/trains": [
+         "PUT /api/v1/trainservice/trains"
+      ],
+      "DELETE /api/v1/adminbasicservice/adminbasic/trains/{?}": [
+         "DELETE /api/v1/trainservice/trains/{?}"
+      ],
+      "DELETE /api/v1/adminbasicservice/adminbasic/prices": [
+         "DELETE /api/v1/priceservice/prices"
+      ],
+      "PUT /api/v1/adminbasicservice/adminbasic/prices": [
+         "PUT /api/v1/priceservice/prices"
+      ],
+      "POST /api/v1/adminbasicservice/adminbasic/prices": [
+         "POST /api/v1/priceservice/prices"
+      ],
+      "PUT /api/v1/adminbasicservice/adminbasic/configs": [
+         "PUT /api/v1/configservice/configs"
+      ],
+      "GET /api/v1/adminbasicservice/adminbasic/stations": [
+         "GET /api/v1/stationservice/stations"
+      ],
+      "PUT /api/v1/adminbasicservice/adminbasic/contacts": [
+         "PUT /api/v1/contactservice/contacts"
+      ],
+      "PUT /api/v1/consignservice/consigns": [
+         "GET /api/v1/consignpriceservice/consignprice/{?}/{?}"
+      ],
+      "POST /api/v1/consignservice/consigns": [
+         "GET /api/v1/consignpriceservice/consignprice/{?}/{?}"
+      ],
+      "POST /api/v1/rebookservice/rebook": [
+         "POST /api/v1/seatservice/seats",
+         "GET /api/v1/inside_pay_service/inside_payment/drawback/{?}/{?}",
+         "GET /api/v1/stationservice/stations/name/{?}",
+         "POST /api/v1/travelservice/trip_detail",
+         "POST /api/v1/travel2service/trip_detail",
+         "POST /api/v1/orderservice/order",
+         "POST /api/v1/orderOtherService/orderOther",
+         "PUT /api/v1/orderservice/order",
+         "PUT /api/v1/orderOtherService/orderOther",
+         "GET /api/v1/orderservice/order/{?}",
+         "GET /api/v1/orderOtherService/orderOther/{?}"
+      ],
+      "POST /api/v1/rebookservice/rebook/difference": [
+         "POST /api/v1/seatservice/seats",
+         "POST /api/v1/inside_pay_service/inside_payment/difference",
+         "GET /api/v1/stationservice/stations/name/{?}",
+         "POST /api/v1/travelservice/trip_detail",
+         "POST /api/v1/travel2service/trip_detail",
+         "POST /api/v1/orderservice/order",
+         "POST /api/v1/orderOtherService/orderOther",
+         "PUT /api/v1/orderservice/order",
+         "PUT /api/v1/orderOtherService/orderOther",
+         "GET /api/v1/orderservice/order/{?}",
+         "GET /api/v1/orderOtherService/orderOther/{?}"
+      ],
+      "POST /api/v1/preserveservice/preserve": [
+         "POST /api/v1/ticketinfoservice/ticketinfo",
+         "POST /api/v1/notifyservice/notification/preserve_success",
+         "GET /api/v1/userservice/users/id/{?}",
+         "POST /api/v1/consignservice/consigns",
+         "POST /api/v1/foodservice/orders",
+         "GET /api/v1/assuranceservice/assurances/{?}/{?}",
+         "POST /api/v1/orderservice/order",
+         "POST /api/v1/seatservice/seats",
+         "GET /api/v1/stationservice/stations/id/{?}",
+         "POST /api/v1/travelservice/trip_detail",
+         "GET /api/v1/contactservice/contacts/{?}",
+         "GET /api/v1/securityservice/securityConfigs/{?}"
+      ],
+      "GET /api/v1/admintravelservice/admintravel": [
+         "GET /api/v1/travelservice/admin_trip",
+         "GET /api/v1/travel2service/admin_trip"
+      ],
+      "POST /api/v1/orderOtherService/orderOther/refresh": [
+         "POST /api/v1/stationservice/stations/namelist"
+      ],
+      "POST /api/v1/admintravelservice/admintravel": [
+         "POST /api/v1/travelservice/trips",
+         "POST /api/v1/travel2service/trips"
+      ],
+      "PUT /api/v1/admintravelservice/admintravel": [
+         "PUT /api/v1/travelservice/trips",
+         "PUT /api/v1/travel2service/trips"
+      ],
+      "DELETE /api/v1/admintravelservice/admintravel/{?}": [
+         "DELETE /api/v1/travelservice/trips/{?}",
+         "DELETE /api/v1/travel2service/trips/{?}"
+      ],
+      "POST /api/v1/adminuserservice/users": [
+         "POST /api/v1/userservice/users/register"
+      ]
+   }
+}

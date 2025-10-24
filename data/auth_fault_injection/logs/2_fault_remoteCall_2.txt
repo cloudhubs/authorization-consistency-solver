@@ -1,0 +1,2 @@
+System connection from GET /api/v1/travel2service/trips/{?} => DELETE /api/v1/assuranceservice/assurances/assuranceid/{?} was added.
+System connection from POST /api/v1/configservice/configs => GET /api/v1/cancelservice/cancel/{?}/{?} was added.

@@ -1,0 +1,6 @@
+Is system satisfiable? unsat
+Applying optimizer... sat
+
+SUGGESTIONS
+PUT /api/v1/adminbasicservice/adminbasic/trains_permittedRoles = 6
+GET /api/v1/assuranceservice/assurances/{?}/{?}_permittedRoles = 2

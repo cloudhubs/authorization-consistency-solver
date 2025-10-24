@@ -1,0 +1,6 @@
+Data operation on ContactsRepository in GET /api/v1/contactservice/contacts/account/{?} was changed from 4 => 6.
+Endpoint authorized roles for GET /api/v1/contactservice/contacts/account/{?} changed from 6 => 5.
+Data operation on AddMoneyRepository in POST /api/v1/inside_pay_service/inside_payment/account was changed from 12 => 13.
+Endpoint authorized roles for POST /api/v1/inside_pay_service/inside_payment/account changed from 6 => 5.
+Data operation on AssuranceRepository in DELETE /api/v1/assuranceservice/assurances/orderid/{?} was changed from 5 => 4.
+Endpoint authorized roles for DELETE /api/v1/assuranceservice/assurances/orderid/{?} changed from 2 => 7.

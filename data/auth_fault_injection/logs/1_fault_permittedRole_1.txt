@@ -1,0 +1,1 @@
+Endpoint authorized roles for GET /api/v1/assuranceservice/assurances/assuranceid/{?} changed from 2 => 5.

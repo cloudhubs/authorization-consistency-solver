@@ -1,0 +1,3 @@
+System connection from POST /api/v1/routeplanservice/routePlan/quickestRoute => DELETE /api/v1/assuranceservice/assurances/assuranceid/{?} was added.
+System connection from DELETE /api/v1/routeservice/routes/{?} => POST /api/v1/adminbasicservice/adminbasic/stations was added.
+System connection from PUT /api/v1/userservice/users => GET /api/v1/assuranceservice/assurance/orderid/{?} was added.

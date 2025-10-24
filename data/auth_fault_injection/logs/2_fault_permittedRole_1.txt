@@ -1,0 +1,2 @@
+Endpoint authorized roles for DELETE /api/v1/adminrouteservice/adminroute/{?} changed from 4 => 1.
+Endpoint authorized roles for GET /api/v1/seatservice/welcome changed from 7 => 4.

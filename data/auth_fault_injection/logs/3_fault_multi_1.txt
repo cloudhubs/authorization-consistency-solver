@@ -1,0 +1,4 @@
+Endpoint authorized roles for GET /api/v1/consignpriceservice/consignprice/price changed from 6 => 4.
+Data operation on FoodStoreRepository in GET /api/v1/foodmapservice/foodstores/{?} was changed from 4 => 14.
+Endpoint authorized roles for GET /api/v1/foodmapservice/foodstores/{?} changed from 7 => 4.
+System connection from DELETE /api/v1/users/{?} => DELETE /api/v1/admintravelservice/admintravel/{?} was added.

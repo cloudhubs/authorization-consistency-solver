@@ -1,0 +1,2 @@
+Endpoint authorized roles for GET /api/v1/adminorderservice/welcome changed from 4 => 2.
+Endpoint authorized roles for GET /api/v1/admintravelservice/admintravel changed from 4 => 0.

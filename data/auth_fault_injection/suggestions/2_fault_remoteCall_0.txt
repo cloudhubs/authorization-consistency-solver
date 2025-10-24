@@ -1,0 +1,7 @@
+Is system satisfiable? unsat
+Applying optimizer... sat
+
+SUGGESTIONS
+GET /api/v1/foodservice/foods/{?}/{?}/{?}/{?}_permittedRoles = 6
+POST /api/v1/adminbasicservice/adminbasic/trains_permittedRoles = 7
+GET /api/v1/foodmapservice/trainfoods/{?}_permittedRoles = 6

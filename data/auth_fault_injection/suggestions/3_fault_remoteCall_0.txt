@@ -1,0 +1,9 @@
+Is system satisfiable? unsat
+Applying optimizer... sat
+
+SUGGESTIONS
+POST /api/v1/travelplanservice/travelPlan/quickest_permittedRoles = 2
+PUT /api/v1/userservice/users_permittedRoles = 2
+PUT /api/v1/adminuserservice/users_permittedRoles = 2
+POST /api/v1/routeplanservice/routePlan/quickestRoute_permittedRoles = 2
+DELETE /api/v1/routeservice/routes/{?}_permittedRoles = 4

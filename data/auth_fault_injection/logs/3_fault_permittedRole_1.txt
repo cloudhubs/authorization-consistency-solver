@@ -1,0 +1,3 @@
+Endpoint authorized roles for POST /api/v1/travelplanservice/travelPlan/quickest changed from 7 => 2.
+Endpoint authorized roles for POST /api/v1/notifyservice/notification/order_create_success changed from 6 => 1.
+Endpoint authorized roles for GET /api/v1/securityservice/welcome changed from 6 => 0.

@@ -1,0 +1,1 @@
+Endpoint authorized roles for GET /api/v1/travel2service/welcome changed from 7 => 0.

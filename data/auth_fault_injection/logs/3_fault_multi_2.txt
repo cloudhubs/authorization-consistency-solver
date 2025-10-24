@@ -1,0 +1,4 @@
+Endpoint authorized roles for DELETE /api/v1/stationservice/stations changed from 4 => 6.
+Data operation on UserRepository in GET /api/v1/userservice/users/id/{?} was changed from 4 => 6.
+Endpoint authorized roles for GET /api/v1/userservice/users/id/{?} changed from 7 => 5.
+System connection from PUT /api/v1/foodservice/orders => POST /api/v1/notifyservice/notification/order_cancel_success was added.

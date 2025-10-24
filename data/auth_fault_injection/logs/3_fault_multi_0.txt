@@ -1,0 +1,4 @@
+Endpoint authorized roles for GET /api/v1/inside_pay_service/inside_payment/drawback/{?}/{?} changed from 6 => 3.
+Data operation on AddMoneyRepository in GET /api/v1/inside_pay_service/inside_payment/money was changed from 4 => 9.
+Endpoint authorized roles for GET /api/v1/inside_pay_service/inside_payment/money changed from 6 => 4.
+System connection from GET /api/v1/foodmapservice/foodstores => PUT /api/v1/admintravelservice/admintravel was added.

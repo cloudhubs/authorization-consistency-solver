@@ -1,0 +1,5 @@
+Is system satisfiable? unsat
+Applying optimizer... sat
+
+SUGGESTIONS
+GET /api/v1/assuranceservice/assurances/assuranceid/{?}_permittedRoles = 2

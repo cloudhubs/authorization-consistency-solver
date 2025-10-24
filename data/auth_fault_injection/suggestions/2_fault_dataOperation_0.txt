@@ -1,0 +1,6 @@
+Is system satisfiable? unsat
+Applying optimizer... sat
+
+SUGGESTIONS
+DELETE /api/v1/userservice/users/{?}_permittedRoles = 7
+GET /api/v1/userservice/users_permittedRoles = 5

@@ -1,0 +1,6 @@
+Is system satisfiable? unsat
+Applying optimizer... sat
+
+SUGGESTIONS
+PUT /api/v1/priceservice/prices_permittedRoles = 6
+DELETE /api/v1/configservice/configs/{?}_permittedRoles = 7

@@ -1,0 +1,351 @@
+{
+   "name": "education-delivery-system",
+   "systemRoles": {
+      "1": "UnauthenticatedRole",
+      "2": "StudentRole",
+      "4": "TeacherRole",
+      "8": "AdminRole"
+   },
+   "microservices": [
+      {
+         "name": "grades-service",
+         "endpoints": [
+            {
+               "name": "getGradesByStudentID",
+               "funcName": "",
+               "allowedRoles": 14,
+               "repositories": [
+                  {
+                     "name": "gradesRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "changeGradesByStudentID",
+               "funcName": "",
+               "allowedRoles": 12,
+               "repositories": [
+                  {
+                     "name": "gradesRepository",
+                     "accessedMethods": 15
+                  }
+               ]
+            },
+            {
+               "name": "calculateGPA",
+               "funcName": "",
+               "allowedRoles": 14,
+               "repositories": [
+                  {
+                     "name": "gradesRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "name": "user-service",
+         "endpoints": [
+            {
+               "name": "getStudentsByTeacherID",
+               "funcName": "",
+               "allowedRoles": 14,
+               "repositories": [
+                  {
+                     "name": "userRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "addUser",
+               "funcName": "",
+               "allowedRoles": 8,
+               "repositories": [
+                  {
+                     "name": "userRepository",
+                     "accessedMethods": 8
+                  }
+               ]
+            },
+            {
+               "name": "updateUser",
+               "funcName": "",
+               "allowedRoles": 14,
+               "repositories": [
+                  {
+                     "name": "userRepository",
+                     "accessedMethods": 2
+                  }
+               ]
+            },
+            {
+               "name": "deleteUser",
+               "funcName": "",
+               "allowedRoles": 8,
+               "repositories": [
+                  {
+                     "name": "userRepository",
+                     "accessedMethods": 1
+                  }
+               ]
+            },
+            {
+               "name": "getUser",
+               "funcName": "",
+               "allowedRoles": 15,
+               "repositories": [
+                  {
+                     "name": "userRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "login",
+               "funcName": "",
+               "allowedRoles": 15,
+               "repositories": [
+                  {
+                     "name": "userRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "name": "course-delivery-service",
+         "endpoints": [
+            {
+               "name": "generateCourseReport",
+               "funcName": "",
+               "allowedRoles": 14,
+               "repositories": [
+                  {
+                     "name": "courseRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "addUserToCourse",
+               "funcName": "",
+               "allowedRoles": 12,
+               "repositories": [
+                  {
+                     "name": "courseRepository",
+                     "accessedMethods": 6
+                  }
+               ]
+            },
+            {
+               "name": "removeUserFromCourse",
+               "funcName": "",
+               "allowedRoles": 12,
+               "repositories": [
+                  {
+                     "name": "courseRepository",
+                     "accessedMethods": 6
+                  }
+               ]
+            },
+            {
+               "name": "createCourse",
+               "funcName": "",
+               "allowedRoles": 12,
+               "repositories": [
+                  {
+                     "name": "courseRepository",
+                     "accessedMethods": 8
+                  }
+               ]
+            },
+            {
+               "name": "deleteCourse",
+               "funcName": "",
+               "allowedRoles": 12,
+               "repositories": [
+                  {
+                     "name": "courseRepository",
+                     "accessedMethods": 1
+                  }
+               ]
+            },
+            {
+               "name": "updateCourse",
+               "funcName": "",
+               "allowedRoles": 12,
+               "repositories": [
+                  {
+                     "name": "courseRepository",
+                     "accessedMethods": 2
+                  }
+               ]
+            },
+            {
+               "name": "exportGrades",
+               "funcName": "",
+               "allowedRoles": 12,
+               "repositories": [
+                  {
+                     "name": "courseRepository",
+                     "accessedMethods": 14
+                  }
+               ]
+            },
+            {
+               "name": "getCourse",
+               "funcName": "",
+               "allowedRoles": 14,
+               "repositories": [
+                  {
+                     "name": "courseRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "name": "file-storage-service",
+         "endpoints": [
+            {
+               "name": "createFile",
+               "funcName": "",
+               "allowedRoles": 14,
+               "repositories": [
+                  {
+                     "name": "fileRepository",
+                     "accessedMethods": 8
+                  }
+               ]
+            },
+            {
+               "name": "deleteFile",
+               "funcName": "",
+               "allowedRoles": 14,
+               "repositories": [
+                  {
+                     "name": "fileRepository",
+                     "accessedMethods": 1
+                  }
+               ]
+            },
+            {
+               "name": "updateFile",
+               "funcName": "",
+               "allowedRoles": 14,
+               "repositories": [
+                  {
+                     "name": "fileRepository",
+                     "accessedMethods": 2
+                  }
+               ]
+            },
+            {
+               "name": "getFile",
+               "funcName": "",
+               "allowedRoles": 15,
+               "repositories": [
+                  {
+                     "name": "fileRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "shareFile",
+               "funcName": "",
+               "allowedRoles": 14,
+               "repositories": [
+                  {
+                     "name": "fileRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            },
+            {
+               "name": "exportTranscript",
+               "funcName": "",
+               "allowedRoles": 14,
+               "repositories": [
+                  {
+                     "name": "fileRepository",
+                     "accessedMethods": 4
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "name": "admin-service",
+         "endpoints": [
+            {
+               "name": "pruneGraduatedStudents",
+               "funcName": "",
+               "allowedRoles": 8,
+               "repositories": [
+                  {
+                     "name": "adminRepository",
+                     "accessedMethods": 15
+                  },
+                  {
+                     "name": "userRepository",
+                     "accessedMethods": 15
+                  }
+               ]
+            }
+         ]
+      }
+   ],
+   "systemConnections": {
+      "getGradesByStudentID": [
+         "getStudentsByTeacherID"
+      ],
+      "changeGradesByStudentID": [
+         "getStudentsByTeacherID"
+      ],
+      "generateCourseReport": [
+         "getGradesByStudentID"
+      ],
+      "addUserToCourse": [
+         "getUser"
+      ],
+      "removeUserFromCourse": [
+         "getUser"
+      ],
+      "createCourse": [
+         "getUser"
+      ],
+      "getFile": [
+         "getUser"
+      ],
+      "deleteFile": [
+         "getUser"
+      ],
+      "updateFile": [
+         "getUser"
+      ],
+      "createFile": [
+         "getUser"
+      ],
+      "pruneGraduatedStudents": [
+         "getFile",
+         "getUser",
+         "removeUserFromCourse",
+         "deleteFile",
+         "generateCourseReport",
+         "calculateGPA",
+         "getGradesByStudentID"
+      ],
+      "exportGrades": [
+         "changeGradesByStudentID"
+      ],
+      "exportTranscript": [
+         "getGradesByStudentID"
+      ]
+   }
+}

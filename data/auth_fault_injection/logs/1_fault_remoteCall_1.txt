@@ -1,0 +1,1 @@
+System connection from GET /api/v1/adminbasicservice/adminbasic/trains => GET /api/v1/consignservice/welcome was added.

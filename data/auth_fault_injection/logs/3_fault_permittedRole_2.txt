@@ -1,0 +1,3 @@
+Endpoint authorized roles for GET /api/v1/travel2service/trips changed from 7 => 5.
+Endpoint authorized roles for POST /api/v1/trainservice/trains changed from 7 => 6.
+Endpoint authorized roles for POST /api/v1/adminorderservice/adminorder changed from 4 => 2.

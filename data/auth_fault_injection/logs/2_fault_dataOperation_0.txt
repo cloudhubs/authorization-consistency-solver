@@ -1,0 +1,4 @@
+Data operation on UserRepository in GET /api/v1/userservice/users was changed from 4 => 15.
+Endpoint authorized roles for GET /api/v1/userservice/users changed from 7 => 0.
+Data operation on UserRepository in DELETE /api/v1/userservice/users/{?} was changed from 5 => 13.
+Endpoint authorized roles for DELETE /api/v1/userservice/users/{?} changed from 7 => 3.

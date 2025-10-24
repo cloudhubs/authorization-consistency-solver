@@ -1,0 +1,6 @@
+Is system satisfiable? unsat
+Applying optimizer... sat
+
+SUGGESTIONS
+POST /api/v1/stationservice/stations/namelist_permittedRoles = 7
+POST /api/v1/stationservice/stations_permittedRoles = 7

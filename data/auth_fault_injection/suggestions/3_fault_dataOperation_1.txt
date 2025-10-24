@@ -1,0 +1,7 @@
+Is system satisfiable? unsat
+Applying optimizer... sat
+
+SUGGESTIONS
+GET /api/v1/contactservice/contacts/account/{?}_permittedRoles = 6
+POST /api/v1/inside_pay_service/inside_payment/account_permittedRoles = 4
+DELETE /api/v1/assuranceservice/assurances/orderid/{?}_permittedRoles = 2

@@ -1,9 +1,9 @@
 # Towards Automated Formal Verification of Authorization Policy in Microservice Systems
-##### Connor Wojtak, Shakthi Weerasinghe, Nilesh Rao, Tomas Cerny, Amr Abdelfattah
+Authors: Connor Wojtak, Shakthi Weerasinghe, Nilesh Rao, Tomas Cerny, Amr Abdelfattah
 
 ## Project Requirements
-* Python and pip are required (confirmed working with Python 3.12.6)
-* Need to be able to retrieve a copy of the source code of Train Ticket
+* Python and pip are required (confirmed working with Python 3.12.6).
+* Need to be able to retrieve a copy of the source code of Train Ticket.
 
 ## Project Structure
 - `/data/system-models` contains all of the intermediate models used to complete the case study.
